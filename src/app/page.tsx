@@ -110,63 +110,7 @@ export default function Home() {
                 Chronic homelessness is defined as being homeless for over 6
                 months.
               </p>
-            </div>
-
-            {/* People Flow Stats */}
-            <div className="space-y-8">
-              <div className="flex items-center justify-between max-w-sm mx-auto">
-                <p className="text-blue-600 text-2xl md:text-4xl font-manrope">
-                  People entering and leaving the system
-                </p>
-                <select className="bg-gray-50 border-2 border-gray-800 rounded px-4 py-2 text-xl font-medium">
-                  <option>June 2025</option>
-                </select>
-              </div>
-
-              <div className="space-y-6">
-                <div className="flex items-center justify-center space-x-4">
-                  <div className="w-20 h-20 bg-red-500 rounded-full flex items-center justify-center">
-                    <svg
-                      className="w-8 h-8 text-white"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M7 14l5-5 5 5z" />
-                    </svg>
-                  </div>
-                  <div className="text-left">
-                    <span className="text-4xl font-bold text-red-500">10</span>
-                    <span className="text-2xl text-gray-800">
-                      {" "}
-                      people became homeless
-                    </span>
-                  </div>
-                </div>
-
-                <div className="w-full h-px bg-gray-800"></div>
-
-                <div className="flex items-center justify-center space-x-4">
-                  <div className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center">
-                    <svg
-                      className="w-8 h-8 text-white"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M7 10l5 5 5-5z" />
-                    </svg>
-                  </div>
-                  <div className="text-left">
-                    <span className="text-4xl font-bold text-green-500">
-                      32
-                    </span>
-                    <span className="text-2xl text-gray-800">
-                      {" "}
-                      people no longer homeless
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
+            </div>{" "}
           </div>
         </div>
       </section>
