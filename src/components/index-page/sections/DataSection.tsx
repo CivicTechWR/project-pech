@@ -13,12 +13,12 @@ import {
 export function DataSection() {
   return (
     <section id="data-trends" className="bg-zinc-900 py-20">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-4 layout">
         <TypographyH2 className="text-3xl lg:text-4xl text-white mb-12 text-center border-0 pb-0">
           What&apos;s the data behind chronic homelessness?
         </TypographyH2>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
+        <div className="grid md:grid-cols-3 gap-8 mb-16 layout">
           <Card className="bg-zinc-800 border-zinc-700">
             <CardContent className="p-8 text-center">
               <div className="flex justify-center mb-4">

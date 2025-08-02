@@ -9,7 +9,7 @@ import {
 export function Goal() {
   return (
     <section className="bg-gray-100 py-20">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-4 layout">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
             <TypographyLarge className="text-gray-600">

@@ -12,7 +12,7 @@ import {
 export function Header() {
   return (
     <header className="fixed top-0 w-full z-50 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/90 border-b border-gray-200">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-4 layout">
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="text-2xl font-bold text-black">
             PECH
@@ -56,7 +56,10 @@ export function Header() {
               </NavigationMenuList>
             </NavigationMenu>
 
-            <Button variant="default" className="bg-gray-800 text-white hover:bg-gray-900">
+            <Button
+              variant="default"
+              className="bg-gray-800 text-white hover:bg-gray-900"
+            >
               Find help now
             </Button>
           </div>

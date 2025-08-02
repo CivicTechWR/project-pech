@@ -16,7 +16,7 @@ import Image from "next/image";
 export function Hero() {
   return (
     <section className="relative bg-zinc-900 pt-24 pb-20">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-4 layout">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
             <TypographyH1 className="text-5xl lg:text-6xl text-white leading-tight">
