@@ -8,8 +8,10 @@ import { Badge } from "@/components/ui/badge";
 import { BuildingIllustration } from "@/components/BuildingIllustration";
 import {
   TypographyH1,
+  TypographyH4,
   TypographyLead,
   TypographySmall,
+  TypographyMedium,
 } from "@/components/ui/typography";
 import Image from "next/image";
 
@@ -26,39 +28,48 @@ export function Hero() {
               <br />
               Homelessness
             </TypographyH1>
-            <TypographyLead className="text-gray-400 max-w-md">
+            <TypographyLead className="text-gray-400">
               A collaborative roadmap for strategies, resources and timelines to
               end chronic homelessness in Waterloo Region
             </TypographyLead>
 
-            <Card className="bg-zinc-800 border-zinc-700 max-w-sm">
-              <CardHeader>
-                <CardTitle className="text-white text-lg">
-                  Our next town hall meeting
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="flex gap-2">
-                  <Badge className="bg-purple-500 hover:bg-purple-600 text-white">
-                    DATE: July 10
-                  </Badge>
-                  <Badge className="bg-pink-500 hover:bg-pink-600 text-white">
-                    TIME: 7PM
-                  </Badge>
-                </div>
+            <Card className="grid lg:grid-cols-2 bg-zinc-800 border-zinc-700">
+              {/* This is the first column. It holds the CardHeader and the other details. */}
+              <div className="space-y-4">
+                <CardHeader>
+                  <CardTitle className="text-white text-lg">
+                    Our next town hall meeting
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <div className="flex gap-2">
+                    <Badge className="bg-purple-500 hover:bg-purple-600 text-white">
+                      DATE: July 10
+                    </Badge>
+                    <Badge className="bg-pink-500 hover:bg-pink-600 text-white">
+                      TIME: 7PM
+                    </Badge>
+                  </div>
+                  <div className="flex items-center gap-2 text-gray-300">
+                    <MapPin className="h-4 w-4" />
+                    <TypographySmall>
+                      Waterloo City Hall
+                      <br />
+                      100 Regina St. S, Waterloo
+                    </TypographySmall>
+                  </div>
+                </CardContent>
+              </div>
 
-                <div className="flex items-center gap-2 text-gray-300">
-                  <MapPin className="h-4 w-4" />
-                  <TypographySmall>
-                    Waterloo City Hall
-                    <br />
-                    100 Regina St. S, Waterloo
-                  </TypographySmall>
-                </div>
-
-                <div className="space-y-2">
-                  <TypographySmall className="text-gray-400">
+              {/* This is the second column. It holds the sign-up section. */}
+              <CardContent>
+                <div className="flex flex-col space-y-4">
+                  <TypographyMedium className="text-gray-400">
                     Sign up for our newsletter:
+                  </TypographyMedium>
+                  <TypographySmall className="text-gray-400">
+                    Enter your email to get meeting details, and important PECH
+                    updates.
                   </TypographySmall>
                   <Input
                     type="email"
@@ -72,13 +83,12 @@ export function Hero() {
               </CardContent>
             </Card>
           </div>
-
-          <div className="relative h-[400px] lg:h-[500px]">
+          <div className="col-start-2 relative h-[400px] lg:h-[500px] flex justify-center items-center">
             <img
               src="imgs/Home/ThreeTownHouses.svg"
               alt=""
-              width="458"
-              height="451"
+              width=""
+              height=""
             ></img>
           </div>
         </div>
