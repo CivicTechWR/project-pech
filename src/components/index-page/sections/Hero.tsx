@@ -12,6 +12,7 @@ import {
   TypographyLead,
   TypographySmall,
   TypographyMedium,
+  TypographyP,
 } from "@/components/ui/typography";
 import Image from "next/image";
 
@@ -33,41 +34,47 @@ export function Hero() {
               end chronic homelessness in Waterloo Region
             </TypographyLead>
 
-            <Card className="grid lg:grid-cols-2 bg-zinc-800 border-zinc-700">
+            <Card className="grid lg:grid-cols-2 bg-white divide-x-2 divide-gray-700 border-zinc-700">
               {/* This is the first column. It holds the CardHeader and the other details. */}
               <div className="space-y-4">
-                <CardHeader>
-                  <CardTitle className="text-white text-lg">
+                <CardHeader className="">
+                  <CardTitle className="text-black text-2xl">
                     Our next town hall meeting
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="flex gap-2">
-                    <Badge className="bg-purple-500 hover:bg-purple-600 text-white">
-                      DATE: July 10
+                    <Badge className="flex-1 h-[38px] px-6 bg-PECH-PURPLE text-white">
+                      <TypographyMedium className="font-light">
+                        July 10, 2025
+                      </TypographyMedium>
                     </Badge>
-                    <Badge className="bg-pink-500 hover:bg-pink-600 text-white">
-                      TIME: 7PM
+                    <Badge className="flex-1 bg-PECH-PURPLE  text-white">
+                      <TypographyMedium className="font-light">
+                        11:30 AM
+                      </TypographyMedium>{" "}
                     </Badge>
                   </div>
-                  <div className="flex items-center gap-2 text-gray-300">
-                    <MapPin className="h-4 w-4" />
+                  <div className="flex items-center gap-2 text-black ">
+                    <MapPin className="flex-1 h-6 w-4" />
                     <TypographySmall>
-                      Waterloo City Hall
-                      <br />
-                      100 Regina St. S, Waterloo
+                      <div className="font-semibold pb-0.5">
+                        Waterloo City Hall
+                      </div>
+                      <div className="font-light">
+                        100 Regina St. S, Waterloo
+                      </div>
                     </TypographySmall>
                   </div>
                 </CardContent>
               </div>
-
               {/* This is the second column. It holds the sign-up section. */}
-              <CardContent>
+              <CardContent className="space-y-4 px-0 pr-4">
                 <div className="flex flex-col space-y-4">
-                  <TypographyMedium className="text-gray-400">
+                  <TypographyMedium className="text-gray-600">
                     Sign up for our newsletter:
                   </TypographyMedium>
-                  <TypographySmall className="text-gray-400">
+                  <TypographySmall className="text-gray-600 font-light">
                     Enter your email to get meeting details, and important PECH
                     updates.
                   </TypographySmall>

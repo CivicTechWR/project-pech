@@ -58,7 +58,7 @@ export function Header() {
 
             <Button
               variant="default"
-              className="bg-gray-800 text-white hover:bg-gray-900"
+              className="bg-PECH-GRAY text-white hover:bg-gray-900"
             >
               Find help now
             </Button>
