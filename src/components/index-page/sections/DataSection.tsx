@@ -20,48 +20,47 @@ export function DataSection() {
           What&apos;s the data behind chronic homelessness?
         </TypographyH2>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-16 layout">
-          <Card className="bg-zinc-800 border-zinc-700">
-            <CardContent className="p-8 text-center">
-              <div className="flex justify-center mb-4">
-                <DollarSign></DollarSign>
-              </div>
-              <TypographyMuted className="text-gray-400 mb-2">
-                Average housing income
-              </TypographyMuted>
-              <TypographyLarge className="text-3xl text-white">
-                $108,500
-              </TypographyLarge>
-            </CardContent>
-          </Card>
+        <div className="grid md:grid-cols-4 gap-8 mb-16">
+          <div className="p-4 flex items-center h-full">
+            <TypographyH3 className="text-3xl text-PECH-PURPLE">
+              The average person cannot affordably pay for housing in the region
+            </TypographyH3>
+          </div>
+          <div className="grid gap-2 text-center place-items-center">
+            <div>
+              <DollarSign className="lg:h-[150px]" />
+            </div>
+            <TypographyMuted className="text-gray-400 mt-6 mb-2">
+              Average housing income
+            </TypographyMuted>
+            <TypographyLarge className="text-3xl text-white">
+              $108,500
+            </TypographyLarge>
+          </div>
 
-          <Card className="bg-zinc-800 border-zinc-700">
-            <CardContent className="p-8 text-center">
-              <div className="flex justify-center mb-4">
-                <SingleHouse></SingleHouse>
-              </div>
-              <TypographyMuted className="text-gray-400 mb-2">
-                Average house price
-              </TypographyMuted>
-              <TypographyLarge className="text-3xl text-white">
-                $619,323
-              </TypographyLarge>
-            </CardContent>
-          </Card>
+          <div className="grid gap-2 text-center place-items-center">
+            <div>
+              <SingleHouse className="lg:h-[150px]" />
+            </div>
+            <TypographyMuted className="text-gray-400 mt-6 mb-2">
+              Average house price
+            </TypographyMuted>
+            <TypographyLarge className="text-3xl text-white">
+              $619,323
+            </TypographyLarge>
+          </div>
 
-          <Card className="bg-zinc-800 border-zinc-700">
-            <CardContent className="p-8 text-center">
-              <div className="flex justify-center mb-4">
-                <ArrowStockUp></ArrowStockUp>
-              </div>
-              <TypographyMuted className="text-gray-400 mb-2">
-                Household income required
-              </TypographyMuted>
-              <TypographyLarge className="text-3xl text-white">
-                $140,919
-              </TypographyLarge>
-            </CardContent>
-          </Card>
+          <div className="grid gap-2 text-center place-items-center">
+            <div>
+              <ArrowStockUp className="lg:h-[150px]" />
+            </div>
+            <TypographyMuted className="text-gray-400 mt-6 mb-2">
+              Household income required
+            </TypographyMuted>
+            <TypographyLarge className="text-3xl text-white">
+              $140,919
+            </TypographyLarge>
+          </div>
         </div>
 
         <div className="bg-zinc-800 rounded-lg p-8 mb-8">

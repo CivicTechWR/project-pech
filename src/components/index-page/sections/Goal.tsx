@@ -11,9 +11,9 @@ export function Goal() {
   return (
     <section className="bg-gray-100 py-20">
       <div className="max-w-7xl mx-auto px-4 layout">
-        <div className="grid lg:grid-cols-[1.2fr_1fr] gap-12 items-center">
+        <div className="grid lg:grid-cols-[1.2fr_1fr] gap-25 items-center">
           <div className="space-y-8">
-            <TypographyH1 className="text-center md:text-left font-normal text-gray-600 mb-4">
+            <TypographyH1 className="text-center font-normal text-gray-600 mb-4">
               Our goal
             </TypographyH1>
             <TypographyH2 className="text-center text-4xl lg:text-5xl text-gray-900 leading-tight border-0 pb-0">
