@@ -5,6 +5,7 @@ import DollarSign from "@/components/Images/DollarSign.svg";
 import ArrowStockUp from "@/components/Images/ArrowStockUp.svg";
 import SingleHouse from "@/components/Images/SingleHouse.svg";
 import {
+  TypographyH1,
   TypographyH2,
   TypographyH3,
   TypographyLarge,
@@ -16,7 +17,7 @@ export function DataSection() {
   return (
     <section id="data-trends" className="bg-zinc-900 py-20">
       <div className="max-w-7xl mx-auto px-4 layout">
-        <TypographyH2 className="text-3xl lg:text-4xl text-white mb-12 text-center border-0 pb-0">
+        <TypographyH2 className="text-white mb-12 text-4xl font-bold-none border-0 pb-8">
           What&apos;s the data behind chronic homelessness?
         </TypographyH2>
 
@@ -63,36 +64,36 @@ export function DataSection() {
           </div>
         </div>
 
-        <div className="bg-zinc-800 rounded-lg p-8 mb-8">
-          <div className="flex items-start gap-4">
-            <span className="text-6xl text-gray-600">&quot;</span>
+        <div className="grid md:grid-cols-3 gap-8 mb-8">
+          <div className="-lg h-full flex items-start col-span-2">
+            <span className="text-6xl text-white">&quot;</span>
             <div className="space-y-4">
-              <TypographyBlockquote className="text-xl text-gray-300 border-0">
+              <TypographyBlockquote className="text-2xl border-0 pl-2">
                 Some guy beat me up on the street. Yeah, I was in the hospital
                 because of it... I died a few times... Meantime my landlord, he
                 got rid of everything in my apartment and I lost my rent-geared
                 to income housing and I ended up discharged from the hospital
                 and driven to the shelter.
+                <span className="pl-2 text-gray-400 not-italic">
+                  — Project Willow Interview Participant
+                </span>
               </TypographyBlockquote>
-              <TypographyMuted className="text-gray-500">
-                — Project Willow Interview Participant
-              </TypographyMuted>
             </div>
           </div>
-        </div>
-
-        <div className="flex items-center justify-between">
-          <div className="space-y-2">
-            <TypographyH3 className="text-2xl text-white">
-              There&apos;s a real life story behind the numbers
-            </TypographyH3>
+          <div className="flex flex-col justify-center h-full p-8 col-span-1">
+            <div className="space-y-2 mb-4">
+              <TypographyH2 className="text-3xl border-none text-PECH-PURPLE">
+                There&apos;s a real life story behind the numbers
+              </TypographyH2>
+            </div>
+            <Button
+              variant="default"
+              size={"lg"}
+              className="bg-white hover:bg-gray-200 text-PECH-PURPLE hover:text-PECH-PURPLE-HOVER self-start"
+            >
+              View Data & Trends →
+            </Button>
           </div>
-          <Button
-            variant="link"
-            className="text-purple-400 hover:text-purple-300"
-          >
-            View Data & Trends →
-          </Button>
         </div>
       </div>
     </section>

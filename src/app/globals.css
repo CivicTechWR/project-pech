@@ -6,6 +6,7 @@
 
 @theme inline {
   --color-PECH-PURPLE: #9957b3;
+  --color-PECH-PURPLE-HOVER: #7d4096ff;
   --color-PECH-GRAY: #5a5a5a;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
