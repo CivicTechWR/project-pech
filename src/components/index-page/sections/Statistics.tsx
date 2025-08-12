@@ -11,7 +11,7 @@ export function Statistics() {
         <TypographyH1 className="font-normal text-gray-600 mb-4">
           In Waterloo Region
         </TypographyH1>
-        <TypographyH1 className="text-[50px] lg:text-[56px] font-bold text-gray-900 mb-6 leading-tight">
+        <TypographyH1 className="lg:text-[56px] font-bold text-gray-900 mb-6 leading-tight">
           257 people are experiencing chronic homelessness
         </TypographyH1>
         <TypographyLead className="text-gray-600 max-w-3xl">
