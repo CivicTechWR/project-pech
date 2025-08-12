@@ -1,7 +1,9 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { BuildingIllustration } from "@/components/BuildingIllustration";
 import { Home, TrendingUp } from "lucide-react";
+import DollarSign from "@/components/Images/DollarSign.svg";
+import ArrowStockUp from "@/components/Images/ArrowStockUp.svg";
+import SingleHouse from "@/components/Images/SingleHouse.svg";
 import {
   TypographyH2,
   TypographyH3,
@@ -22,15 +24,7 @@ export function DataSection() {
           <Card className="bg-zinc-800 border-zinc-700">
             <CardContent className="p-8 text-center">
               <div className="flex justify-center mb-4">
-                <div className="relative">
-                  <img
-                    src="imgs/Home/DollarSign.svg"
-                    alt="Dollar Sign"
-                    width=""
-                    height=""
-                    className="w-24 h-24"
-                  ></img>
-                </div>
+                <DollarSign></DollarSign>
               </div>
               <TypographyMuted className="text-gray-400 mb-2">
                 Average housing income
@@ -44,13 +38,7 @@ export function DataSection() {
           <Card className="bg-zinc-800 border-zinc-700">
             <CardContent className="p-8 text-center">
               <div className="flex justify-center mb-4">
-                <img
-                  src="imgs/Home/SingleHouse.svg"
-                  alt="Dollar Sign"
-                  width=""
-                  height=""
-                  className="w-24 h-24"
-                ></img>
+                <SingleHouse></SingleHouse>
               </div>
               <TypographyMuted className="text-gray-400 mb-2">
                 Average house price
@@ -64,13 +52,7 @@ export function DataSection() {
           <Card className="bg-zinc-800 border-zinc-700">
             <CardContent className="p-8 text-center">
               <div className="flex justify-center mb-4">
-                <img
-                  src="imgs/Home/ArrowStockUp.svg"
-                  alt="Dollar Sign"
-                  width=""
-                  height=""
-                  className="w-24 h-24"
-                ></img>
+                <ArrowStockUp></ArrowStockUp>
               </div>
               <TypographyMuted className="text-gray-400 mb-2">
                 Household income required

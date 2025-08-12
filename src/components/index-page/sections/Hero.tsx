@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
-import { BuildingIllustration } from "@/components/BuildingIllustration";
+import ThreeHouses from "@/components/Images/ThreeTownHouses.svg";
 import {
   TypographyH1,
   TypographyH4,
@@ -14,13 +14,12 @@ import {
   TypographyMedium,
   TypographyP,
 } from "@/components/ui/typography";
-import Image from "next/image";
 
 export function Hero() {
   return (
     <section className="relative bg-zinc-900 pt-24 pb-20">
       <div className="max-w-7xl mx-auto px-4 layout">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-25 items-center">
           <div className="space-y-8">
             <TypographyH1 className="text-5xl lg:text-6xl text-white leading-tight">
               The Plan
@@ -90,13 +89,8 @@ export function Hero() {
               </CardContent>
             </Card>
           </div>
-          <div className="col-start-2 relative h-[400px] lg:h-[500px] flex justify-center items-center">
-            <img
-              src="imgs/Home/ThreeTownHouses.svg"
-              alt=""
-              width=""
-              height=""
-            ></img>
+          <div className="col-start-2 relative w-[400px] lg:w-[480px] h-[400px] lg:h-[500px] flex justify-center items-center [@media(max-width:600px)]:hidden">
+            <ThreeHouses></ThreeHouses>
           </div>
         </div>
       </div>
