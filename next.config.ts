@@ -24,6 +24,7 @@ const nextConfig: NextConfig = {
   },
 
   // ...other config
+	/* config options here */
 };
 
 export default nextConfig;
