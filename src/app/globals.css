@@ -1,9 +1,15 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@import "./layout.css";
 
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+	--color-PECH-PURPLE: #9957b3;
+  	--color-PECH-PURPLE-HOVER: #7d4096ff;
+  	--color-PECH-GRAY: #5a5a5a;
+  	--color-PECH-BLACK: #2c2c2c;
+  	--color-PECH-DARK-GREEN: #095a5a;
 	--color-background: var(--background);
 	--color-foreground: var(--foreground);
 	--font-sans: var(--font-geist-sans);

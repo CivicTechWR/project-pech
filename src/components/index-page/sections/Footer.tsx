@@ -5,7 +5,7 @@ import { TypographySmall } from "@/components/ui/typography";
 export function Footer() {
 	return (
 		<footer className="bg-zinc-900 py-16 border-t border-zinc-800">
-			<div className="max-w-7xl mx-auto px-4">
+			<div className="max-w-7xl mx-auto px-4 layout">
 				<div className="flex flex-col md:flex-row justify-between items-center gap-8">
 					<Link
 						href="#updates"

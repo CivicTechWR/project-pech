@@ -62,6 +62,13 @@ export function TypographyLarge({ children, className }: TypographyProps) {
 	);
 }
 
+export function TypographyMedium({ children, className }: TypographyProps) {
+  return (
+    <small className={cn("text-base font-medium leading-none", className)}>
+      {children}
+    </small>
+  );
+}
 export function TypographySmall({ children, className }: TypographyProps) {
 	return (
 		<small className={cn("text-sm font-medium leading-none", className)}>

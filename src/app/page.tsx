@@ -5,19 +5,21 @@ import { Goal } from "@/components/index-page/sections/Goal";
 import { Header } from "@/components/index-page/sections/Header";
 import { Hero } from "@/components/index-page/sections/Hero";
 import { Statistics } from "@/components/index-page/sections/Statistics";
+import { TownHall } from "@/components/index-page/sections/TownHall";
 
 export default function Home() {
-	return (
-		<>
-			<Header />
-			<main>
-				<Hero />
-				<Statistics />
-				<Goal />
-				<DataSection />
-				<CommunitySpotlight />
-			</main>
-			<Footer />
-		</>
-	);
+  return (
+    <>
+      <Header />
+      <main>
+        <Hero />
+        <Statistics />
+        <Goal />
+        <DataSection />
+        <CommunitySpotlight />
+        <TownHall />
+      </main>
+      <Footer />
+    </>
+  );
 }
