@@ -15,7 +15,7 @@ export function DataSection() {
 		<section id="data-trends" className="bg-zinc-900 py-20">
 			<div className="max-w-7xl mx-auto px-4">
 				<TypographyH2 className="text-3xl lg:text-4xl text-white mb-12 text-center border-0 pb-0">
-					What&apos;s the data behind chronic homelessness?
+					Research shows our housing system is shaky like a Jenga tower
 				</TypographyH2>
 
 				<div className="grid md:grid-cols-3 gap-8 mb-16">
