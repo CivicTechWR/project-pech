@@ -1,3 +1,4 @@
+import { ArrowRightIcon } from "lucide-react";
 import Link from "next/link";
 import { CommunityIcon } from "../../components/icons/community.icon";
 import { DocumentWithCheckIcon } from "../../components/icons/document-with-check.icon";
@@ -5,12 +6,14 @@ import { DollarIcon } from "../../components/icons/dollar.icon";
 import { HomeIcon } from "../../components/icons/home.icon";
 import { DollarSignIllustration } from "../../components/illustrations/dollarsign";
 import { HumanIllustration } from "../../components/illustrations/human";
+import { ButtonVariants } from "../../components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "../../components/ui/card";
 import { Container } from "../../components/ui/container";
 import { Heading } from "../../components/ui/heading";
 import { Text } from "../../components/ui/text";
 import { cn } from "../../lib/utils";
 import { ResearchHeaderCopyIllustration } from "./header-copy-illustration";
+import { HouseIllustration } from "./house-illustration";
 
 const FeatureChangeCardItems: Array<FeatureChangeCardProps> = [
 	{
@@ -310,7 +313,7 @@ export default function ResearchPage() {
 						</Text>
 					</div>
 
-					<div className="grid grid-cols-2 gap-4">
+					<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 						{FeatureChangeCardItems.map((item) => {
 							return (
 								<FeatureChangeCard
@@ -321,8 +324,48 @@ export default function ResearchPage() {
 								/>
 							);
 						})}
+					</div>
+
+					<div className="flex flex-row gap-8 items-center">
+						<div>
+							<div className="flex flex-col gap-8">
+								<Heading as="h3" size="sm" className="font-medium">
+									But there’s still work to do!
+								</Heading>
+								<Heading as="h3" size="sm" className="font-medium">
+									We still need more safe, affordable housing and stronger supports to help the system thrive for everyone.
+								</Heading>
+							</div>
+						</div>
+
+						<div>
+							<HouseIllustration className="w-120 h-120" />
+						</div>
 
 					</div>
+				</Container>
+			</div>
+			<div>
+				<Container size="6xl" className="py-20 flex flex-col gap-4">
+					<Heading as="h3" size="lg" className="text-brand-dark-green font-bold">
+						Be Part of the Solution
+					</Heading>
+					<Text size="xl" className="font-semibold text-brand-grey">
+						Ending chronic homelessness takes all of us. Learn more about the Plan, share what you know, and speak up for safe, affordable housing in Waterloo Region.
+					</Text>
+					<Link
+						href="/plan"
+						className={cn(
+							ButtonVariants({
+								size: "default",
+							}),
+							"bg-brand-dark-green text-white hover:bg-brand-dark-green/90",
+							"w-fit mt-2",
+						)}
+					>
+						Learn about The Plan
+						<ArrowRightIcon />
+					</Link>
 				</Container>
 			</div>
 		</div>
