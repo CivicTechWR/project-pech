@@ -38,10 +38,10 @@ export function HousingSupport() {
 							<Cross2Icon className="h-8 w-8" />
 						</Dialog.Close>
 
-						<div className="grid grid-cols-1 min-[1100px]:grid-cols-2 gap-6 items-center mx-8">
+						<div className="grid grid-cols-1 min-[1100px]:grid-cols-2 gap-6 items-center mx-8 mb-8">
 							{/* Content Side */}
 							<div className="space-y-4">
-								<Dialog.Title className="scroll-m-20 tracking-tight text-[1.875rem] leading-[2.25rem] sm:text-[2.5rem] sm:leading-[2.75rem] md:text-[3rem] md:leading-[4rem] lg:text-[4.0rem] lg:leading-[5.625rem]">
+								<Dialog.Title className="scroll-m-20 tracking-tight text-[clamp(1.875rem,3vw,4rem)] leading-[clamp(2.25rem,4vw,5.625rem)]">
 									Need Housing Help Now?
 								</Dialog.Title>
 
