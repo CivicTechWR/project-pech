@@ -1,9 +1,116 @@
 import Link from "next/link";
+import { CommunityIcon } from "../../components/icons/community.icon";
+import { DocumentWithCheckIcon } from "../../components/icons/document-with-check.icon";
+import { DollarIcon } from "../../components/icons/dollar.icon";
+import { HomeIcon } from "../../components/icons/home.icon";
+import { DollarSignIllustration } from "../../components/illustrations/dollarsign";
 import { HumanIllustration } from "../../components/illustrations/human";
+import { Card, CardContent, CardHeader, CardTitle } from "../../components/ui/card";
 import { Container } from "../../components/ui/container";
 import { Heading } from "../../components/ui/heading";
 import { Text } from "../../components/ui/text";
+import { cn } from "../../lib/utils";
 import { ResearchHeaderCopyIllustration } from "./header-copy-illustration";
+
+const FeatureChangeCardItems: Array<FeatureChangeCardProps> = [
+	{
+		icon: <HomeIcon />,
+		title: "Building more homes",
+		items: [
+			// eslint-disable-next-line react/no-missing-key
+			<Text
+				size="md"
+				as="span"
+			>
+				We're building more affordable housing.
+			</Text>,
+			// eslint-disable-next-line react/no-missing-key
+			<Text
+				size="md"
+				as="span"
+			>
+				We're adding more transitional housing spaces.
+			</Text>,
+			// eslint-disable-next-line react/no-missing-key
+			<Text size="md" as="span">
+				We've opened a shelter for women and gender-diverse people.
+			</Text>,
+			// eslint-disable-next-line react/no-missing-key
+			<Text size="md" as="span">
+				Learn about the Region of Waterloo's Building Better Futures Plan
+				{" "}
+				<Link href="https://www.regionofwaterloo.ca/en/living-here/affordable-housing-plan.aspx" className="text-brand-medium-green">[LINK]</Link>
+			</Text>,
+		],
+	},
+	{
+		icon: <CommunityIcon />,
+		title: "Community First",
+		items: [
+			// eslint-disable-next-line react/no-missing-key
+			<Text
+				size="md"
+				as="span"
+			>
+				We’re centering community voices in all our work.
+			</Text>,
+			// eslint-disable-next-line react/no-missing-key
+			<Text
+				size="md"
+				as="span"
+			>
+				We’ve created flexible funding so equity-owed groups can use it in ways that work best for them.
+			</Text>,
+			// eslint-disable-next-line react/no-missing-key
+			<Text size="md" as="span">
+				We’re doing more research to better understand the needs of the community.
+			</Text>,
+
+		],
+	},
+
+	{
+		icon: <DocumentWithCheckIcon />,
+		title: "Better Systems",
+		items: [
+			// eslint-disable-next-line react/no-missing-key
+			<Text
+				size="md"
+				as="span"
+			>
+				We’ve set up working groups to solve big challenges in ending homelessness.
+			</Text>,
+			// eslint-disable-next-line react/no-missing-key
+			<Text
+				size="md"
+				as="span"
+			>
+				We’re checking our work to make sure it follows best practices and is trauma-informed.
+			</Text>,
+		],
+	},
+
+	{
+		icon: <DollarIcon />,
+		title: "Stronger Supports",
+		items: [
+			// eslint-disable-next-line react/no-missing-key
+			<Text
+				size="md"
+				as="span"
+			>
+				We’ve launched a program to help people pay their rent
+			</Text>,
+			// eslint-disable-next-line react/no-missing-key
+			<Text
+				size="md"
+				as="span"
+			>
+				We’ve built new supports for the workers who help people without housing.
+			</Text>,
+		],
+	},
+];
 
 export default function ResearchPage() {
 	return (
@@ -34,7 +141,7 @@ export default function ResearchPage() {
 							We've Got Cracks in Our System
 						</Heading>
 						<Text size="lg" className="text-brand-grey">
-							To make sure our system does not topple over, we have to build a better foundation that supports all of our needs. We’ve got cracks in our system.
+							To make sure our system does not topple over, we have to build a better foundation that supports all of our needs. We've got cracks in our system.
 						</Text>
 
 					</section>
@@ -157,8 +264,103 @@ export default function ResearchPage() {
 							</Link>
 						</Text>
 					</section>
+					<section className="flex flex-col gap-8">
+						<Heading as="p" size="md" className="text-brand-grey">
+							Housing loss due to low wages and high rents
+						</Heading>
+						<div className="flex justify-between items-center">
+							<div>
+								<DollarSignIllustration />
+							</div>
+							<div>
+								<DollarSignIllustration />
+							</div>
+						</div>
+						<Text size="xl" className="text-brand-grey">
+							There is no rent control for housing built after 2018, so we are losing affordable housing. As one lived expert said: “Affordable housing means rent control. People on fixed incomes can't handle big rent increases without harming their health.”
+							{" "}
+							<Link
+								className="text-brand-medium-green"
+								href="https://caeh.ca/wp-content/uploads/WH6-%E2%80%98Dont-Tell-People-Youre-Homeless-Experiences-of-Safety-Violence-and-Justice-among-Womens-Emergency-Shelter-Users.pdf"
+							>
+								[LINK]
+							</Link>
+						</Text>
+
+					</section>
+					<section className="flex flex-col gap-8">
+						<Heading as="p" size="md" className="text-brand-grey">
+							Even with shelters and housing supports, many people can't find a safe place that meets their needs.
+						</Heading>
+						<Text size="xl" className="text-brand-grey">
+							Shelter spaces are often for specific groups, which leaves gaps for couples, 2SLGBTQ+ people, and those with pets. Rising rents, low incomes that can't keep up with the cost of living, and the loss of deeply affordable and therapeutic housing has damaged our whole housing system...
+						</Text>
+
+					</section>
 				</div>
 			</Container>
+			<div className="bg-brand-black text-white">
+				<Container size="6xl" className="py-20 flex flex-col gap-8">
+					<div className="flex flex-col gap-8">
+						<Heading as="h3" size="md">
+							We're Changing the System
+						</Heading>
+						<Text size="xl">
+							It is time to rebuild our system to create something more resilient and transformed, or even a new kind of structure, rather than trying to force pieces to fit where they no longer make sense.
+						</Text>
+					</div>
+
+					<div className="grid grid-cols-2 gap-4">
+						{FeatureChangeCardItems.map((item) => {
+							return (
+								<FeatureChangeCard
+									key={item.title.toString()}
+									icon={item.icon}
+									title={item.title}
+									items={item.items}
+								/>
+							);
+						})}
+
+					</div>
+				</Container>
+			</div>
 		</div>
+	);
+}
+
+interface FeatureChangeCardProps {
+	icon: React.ReactNode;
+	title: string;
+	items: Array<React.ReactNode>;
+}
+
+function FeatureChangeCard({ icon, title, items }: FeatureChangeCardProps) {
+	return (
+		<Card className="bg-brand-yellow min-h-64">
+			<CardHeader>
+				<div>
+					{icon}
+				</div>
+				<CardTitle className="flex flex-row gap-2 items-center">
+					<Text size="md" className="font-bold text-brand-dark-green">
+						{title}
+					</Text>
+				</CardTitle>
+				<CardContent className="mt-2">
+					<ul className={cn("list-disc list-outside")}>
+						{items.map(item => (
+							<Text
+								as="li"
+								className="text-brand-grey"
+								key={JSON.stringify(item)}
+							>
+								{item}
+							</Text>
+						))}
+					</ul>
+				</CardContent>
+			</CardHeader>
+		</Card>
 	);
 }
