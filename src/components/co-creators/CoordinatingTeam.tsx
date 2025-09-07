@@ -3,9 +3,9 @@
 import type { Profile } from "@/lib/directus";
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
-import { TypographyH2 } from "@/components/ui/typography";
 import { getDirectusAssetUrl } from "@/lib/assets";
 import { directus, readItems } from "@/lib/directus";
+import { Heading } from "../../components/ui/heading";
 import { Container } from "../ui/container";
 
 async function getCoordinatingTeam(): Promise<Profile[]> {
@@ -38,9 +38,9 @@ export default async function CoordinatingTeam() {
 	return (
 		<section className="bg-white py-20">
 			<Container size="6xl">
-				<TypographyH2 className="font-semibold mb-4 text-brand-dark-green">
+				<Heading as="h3" size="lg" className="text-brand-dark-green mb-5">
 					Coordinating team
-				</TypographyH2>
+				</Heading>
 				<p className="text-gray-600 mb-16">
 					Our coordinating team brings together people with many skills and experiences. Together, they guide the work to end chronic homelessness in Waterloo Region.
 				</p>
@@ -48,7 +48,7 @@ export default async function CoordinatingTeam() {
 				<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 					{teamMembers.map(member => (
 						<Card key={member.id} className="pt-0 rounded-sm overflow-hidden">
-							<div className="relative h-36 w-full">
+							<div className="relative h-40 w-full">
 								{member.profile_image
 									? (
 										<Image

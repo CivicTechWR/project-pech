@@ -16,10 +16,10 @@ export default function CoCreators() {
 					<div className="grid lg:grid-cols-2 gap-12 items-center">
 						<div className="flex flex-col gap-4">
 							<Heading size="2xl" className="font-semibold">
-								Meet the co-creators
+								Meet the Co-Creators
 							</Heading>
 							<Text size="xl">
-								This plan was built by our community, for our community. Our co-creators include people with lived experience of homelessness, service providers, advocates, and local leaders. Each person brought their ideas, skills, and stories to help shape a plan that works for everyone in Waterloo Region.
+								This plan was built by our community, for our community. Our Co-Creators include people with lived experience of homelessness, service providers, advocates, and local leaders. Each person brought their ideas, skills, and stories to help shape a plan that works for everyone in Waterloo Region.
 							</Text>
 						</div>
 						<div>
@@ -39,12 +39,24 @@ export default function CoCreators() {
 
 						<Heading size="lg" className="text-brand-dark-green">About PECH</Heading>
 
-						<div className="flex flex-row gap-8 flex-wrap items-center">
+						<div className="flex flex-row gap-4 flex-wrap items-center">
 							<Text
 								size="xl"
 								className="font-semibold text-brand-grey max-w-3xl"
 							>
-								Plan to End Chronic Homelessness Prototyping Pilot Project started in March 2023 involving a team of lived experts, Region and SDC staff, seeking to enable implementation of potential solutions  to end chronic homelessness rooted in lived experience of unsheltered  and hidden homeless. The "Lived Expertise Prototyping Project" process report was compiled to describe the work done by August 2023, and was interwoven into the Key Findings Report that was presented to the Council on September 12th.
+								Homelessness in Waterloo Region is higher than ever before. It is a complex problem with many causes, so there is no single solution.
+							</Text>
+							<Text
+								size="xl"
+								className="font-semibold text-brand-grey max-w-3xl"
+							>
+								To respond, the community worked with Region of Waterloo staff in order to co-create The Plan to End Chronic Homelessness. This plan is a roadmap with clear strategies, resources, and timelines to end chronic homelessness in our region.
+							</Text>
+							<Text
+								size="xl"
+								className="font-semibold text-brand-grey max-w-3xl"
+							>
+								The voices of people with lived experience are central to this work. The Plan is created with the community, by the community, and for the community.
 							</Text>
 							<div className="flex-shrink-0 w-64 h-64">
 								<Image

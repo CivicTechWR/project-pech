@@ -1,5 +1,6 @@
 import { ArrowRightIcon } from "lucide-react";
 import Link from "next/link";
+import { ExternalLink } from "../../components/external-link";
 import { CommunityIcon } from "../../components/icons/community.icon";
 import { DocumentWithCheckIcon } from "../../components/icons/document-with-check.icon";
 import { DollarIcon } from "../../components/icons/dollar.icon";
@@ -22,7 +23,7 @@ import { SolidHouseIllustration } from "./solid-house-illustration";
 const FeatureChangeCardItems: Array<FeatureChangeCardProps> = [
 	{
 		icon: <HomeIcon />,
-		title: "Building more homes",
+		title: "Building More Homes",
 		items: [
 			// eslint-disable-next-line react/no-missing-key
 			<Text
@@ -46,7 +47,7 @@ const FeatureChangeCardItems: Array<FeatureChangeCardProps> = [
 			<Text size="md" as="span">
 				Learn about the Region of Waterloo's Building Better Futures Plan
 				{" "}
-				<Link href="https://www.regionofwaterloo.ca/en/living-here/affordable-housing-plan.aspx" className="text-brand-medium-green">[LINK]</Link>
+				<ExternalLink href="https://www.regionofwaterloo.ca/en/living-here/affordable-housing-plan.aspx" className="text-brand-medium-green">[LINK]</ExternalLink>
 			</Text>,
 		],
 	},
@@ -155,19 +156,19 @@ export default function ResearchPage() {
 								We've got cracks in our system
 							</Heading>
 							<Text size="md" className="text-brand-grey">
-								To make sure our system does not topple over, we have to build a better foundation that supports all of our needs. We've got cracks in our system.
+								To make sure our system does not topple over, we have to build a better foundation that supports all of our needs. Homelessness is complicated, and unfortunately, lots of people fall through the cracks.
 							</Text>
 						</section>
 
 						<div className="relative">
 							<section className="max-w-2xl flex flex-col gap-8">
 								<Heading as="p" size="md" className="text-brand-grey">
-									1 in 10 people in Waterloo Region face homelessness
+									More than half of all known homelessness in Ontario is chronic
 								</Heading>
 								<div className="flex gap-4">
 									{[...Array.from({ length: 10 })].map((_, index) => (
 										<HumanIllustration
-											variant={index === 0 ? "brand-medium-green" : "brand-grey"}
+											variant={index < 5 ? "brand-medium-green" : "brand-grey"}
 											// eslint-disable-next-line react/no-array-index-key
 											key={`human-${index}`}
 										/>
@@ -177,42 +178,46 @@ export default function ResearchPage() {
 									<div className="flex flex-row gap-2 items-center">
 										<div className="h-4 w-4 rounded-full bg-brand-medium-green"></div>
 										<Text size="md" className="text-brand-grey">
-											Homeless
+											Chronically Unhoused
 										</Text>
 									</div>
 									<div className="flex flex-row gap-2 items-center">
 										<div className="h-4 w-4 rounded-full bg-brand-grey"></div>
 										<Text size="md" className="text-brand-grey">
-											Non-homeless
+											Unhoused
 										</Text>
 									</div>
 								</div>
 								<Text size="md" className="text-brand-grey">
-									Since 2020, chronic homelessness has grown by
+									Since 2020, chronic homelessness in Waterloo Region has grown by
 									{" "}
-									<strong>28%</strong>
-									{" "}
-									each year.
-									{" "}
-									<Link href="https://waterlooregion.org/sites/default/files/PECHKeyFindingsReport_DRAFT.pdf" className="text-brand-medium-green">LINK</Link>
+									<Link href="https://waterlooregion.org/sites/default/files/PECHKeyFindingsReport_DRAFT.pdf" className="text-brand-medium-green">
+										<strong>28%</strong>
+										{" "}
+										each year
+									</Link>
+									.
 								</Text>
 								<Text size="md" className="text-brand-grey">
 									On October 22, 2024,
-									{" "}
-									<strong>2,371 people</strong>
-									{" "}
-									were experiencing homelessness in Waterloo Region. With only
-									{" "}
-									<strong>301 shelter beds</strong>
-									{" "}
-									available, many had to live outside or sleep in cars.
 									{" "}
 									<Link
 										href="https://www.regionofwaterloo.ca/en/living-here/resources/Housing-Services/137392-CS---PIT-Count-Infographic_Accessibility.pdf"
 										className="text-brand-medium-green"
 									>
-										LINK
+										<strong>2,371 people</strong>
+										{" "}
+										were experiencing homelessness in Waterloo Region
 									</Link>
+									. With only
+									{" "}
+									<strong>301 shelter beds</strong>
+									{" "}
+									available, many had to live outside or sleep in cars.
+								</Text>
+								<Text size="md" className="text-brand-grey">
+									Some people may not have been counted by service providers if they were unsheltered, unsafely housed, or couch-surfing. This is known as hidden homelessness.
+									It also means there could be many more people experiencing homelessness than counted by our system.
 								</Text>
 							</section>
 							<BlockIllustration
@@ -227,7 +232,7 @@ export default function ResearchPage() {
 						<div className="relative">
 							<section className="max-w-xl flex flex-col gap-8">
 								<Heading as="p" size="md" className="text-brand-grey">
-									5 main reasons people are facing homelessness
+									5 main reasons people in Waterloo Region are experiencing homelessness:
 								</Heading>
 								<div className="flex flex-col gap-4">
 									<ul className="list-disc list-inside">
@@ -276,10 +281,10 @@ export default function ResearchPage() {
 						<div className="relative">
 							<section className="max-w-xl flex flex-col gap-8">
 								<Heading as="p" size="md" className="text-brand-grey">
-									Gender-based violence is a cause of almost half (45%) of family homelessness cases.
+									45% of family homelessness cases caused by gender-based violence
 								</Heading>
 								<Text size="md" className="text-brand-grey">
-									In local research, 83% of women said they stayed in an abusive housing situation because it felt safer than being unhoused. This is called hidden homelessness.
+									In local research, 83% of women said they stayed in an abusive housing situation because it felt safer than being unhoused, contributing to hidden homelessness.
 									{" "}
 									<Link
 										className="text-brand-medium-green"
@@ -289,7 +294,7 @@ export default function ResearchPage() {
 									</Link>
 								</Text>
 								<Text size="md" className="text-brand-grey">
-									Youth on the margins: a region-wide survey in 2023, found that 13% of young people had experienced homelessness.
+									In a 2023 region-wide survey, 13% of young people said that they had experienced homelessness.
 									{" "}
 									<Link
 										className="text-brand-medium-green"
@@ -311,7 +316,7 @@ export default function ResearchPage() {
 						<div className="relative">
 							<section className="max-w-xl flex flex-col gap-12">
 								<Heading as="p" size="md" className="text-brand-grey">
-									Housing loss due to low wages and high rents
+									High rents and low wages contribute to housing loss
 								</Heading>
 								<div className="flex justify-evenly items-center gap-4">
 									<div className="flex flex-col gap-2 items-center">
@@ -364,7 +369,7 @@ export default function ResearchPage() {
 									Even with shelters and housing supports, many people can't find a safe place that meets their needs.
 								</Heading>
 								<Text size="md" className="text-brand-grey">
-									Shelter spaces are often for specific groups, which leaves gaps for couples, 2SLGBTQ+ people, and those with pets. Rising rents, low incomes that can't keep up with the cost of living, and the loss of deeply affordable and therapeutic housing has damaged our whole housing system...
+									Shelter spaces are often for specific groups, which leaves gaps for couples, 2SLGBTQ+ people, and those with pets. Rising rents, low incomes that can't keep up with the cost of living, and the loss of deeply affordable and therapeutic housing has damaged our whole housing system.
 								</Text>
 							</div>
 							<div>
@@ -377,7 +382,7 @@ export default function ResearchPage() {
 			<div className="bg-brand-black text-white">
 				<Container size="6xl" className="py-20 flex flex-col gap-8">
 					<div className="flex flex-col gap-8">
-						<Heading as="h3" size="md">
+						<Heading as="h3" size="lg">
 							We're changing the system
 						</Heading>
 						<Text size="md">
