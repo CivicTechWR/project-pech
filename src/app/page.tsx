@@ -11,6 +11,8 @@ import { BuildingUnderConstructionIllustration } from "../components/pages/index
 import { FallenBuildingIllustration } from "../components/pages/index-page/fallen-building-illustration";
 import { HousingStatsContainer } from "../components/pages/index-page/housing-stats/housing-stats-container";
 
+export const dynamic = "force-dynamic";
+
 const IllustrationWithCopyItems: Array<IllustrationWithCopyProps> = [
 	{
 		illustration: <BuildingIllustration />,
@@ -58,7 +60,10 @@ export default function Home() {
 				size="6xl"
 				className="py-20"
 			>
-				<div>
+				<div className="flex flex-col gap-4">
+					<Heading size="md" className="font-normal">
+						Monthly updates for Waterloo Region
+					</Heading>
 					<HousingStatsContainer />
 				</div>
 			</Container>
