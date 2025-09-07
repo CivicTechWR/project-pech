@@ -160,7 +160,7 @@ export default function ResearchPage() {
 						</section>
 
 						<div className="relative">
-							<section className="max-w-3xl flex flex-col gap-8">
+							<section className="max-w-2xl flex flex-col gap-8">
 								<Heading as="p" size="md" className="text-brand-grey">
 									1 in 10 people in Waterloo Region face homelessness
 								</Heading>
