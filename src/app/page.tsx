@@ -1,4 +1,6 @@
+import type { Profile } from "../lib/directus";
 import { ArrowRightIcon } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { HouseIllustration } from "@/components/pages/index-page";
@@ -9,7 +11,11 @@ import { cn } from "@/lib/utils";
 import { BuildingIllustration } from "../components/pages/index-page/building-illustration";
 import { BuildingUnderConstructionIllustration } from "../components/pages/index-page/building-under-construction-illustration";
 import { FallenBuildingIllustration } from "../components/pages/index-page/fallen-building-illustration";
+import { HouseWithMagnifyingLensIllustration } from "../components/pages/index-page/house-with-magnifying-lens-illustration";
 import { HousingStatsContainer } from "../components/pages/index-page/housing-stats/housing-stats-container";
+import { Button } from "../components/ui/button";
+import { getDirectusAssetUrl } from "../lib/assets";
+import { directus, readItems } from "../lib/directus";
 
 export const dynamic = "force-dynamic";
 
@@ -127,7 +133,123 @@ export default function Home() {
 					</div>
 				</Container>
 			</section>
+			<section className="bg-brand-white text-brand-grey py-20">
+				<Container size="6xl" className="flex flex-col gap-2">
+					<Heading as="h3" size="md" className="font-normal">Our goal</Heading>
+					<div className="grid grid-cols-12 gap-8">
+						<div className="col-span-12 md:col-span-8 flex flex-col gap-6">
+							<Heading as="h4" size="lg" className="font-bold text-brand-black">
+								Help us reach functional zero by 2030
+							</Heading>
+							<Text>
+								Functional zero is when a community has ended homelessness for a group of people. This means there are no people without a home, or just a very small number, like 3 people or less than 1 out of 1,000. The community also has enough housing and support to help anyone who needs it. To count as functional zero, the community must keep numbers this low for three months in a row.
+							</Text>
+							<Text>
+								Together with our community partners, we have a plan to end chronic homelessness in Waterloo Region.
+							</Text>
+							<Button variant="default" className="w-fit" asChild>
+								<Link href="/plan">
+									Learn about The Plan
+									<ArrowRightIcon />
+								</Link>
+							</Button>
+						</div>
+						<div>
+							<HouseWithMagnifyingLensIllustration
+								className={cn(
+									"w-120 h-120",
+									"hidden md:block",
+								)}
+							/>
+						</div>
+
+					</div>
+				</Container>
+			</section>
+			<section className=" text-brand-grey py-10">
+				<Container size="6xl" className="flex flex-col gap-2">
+					<div className="grid grid-cols-12">
+						<div className="col-span-12 md:col-span-4 flex flex-col gap-6">
+							<Heading size="lg" className="font-bold text-brand-black">
+								Meet the Co-creators
+							</Heading>
+							<Text size="lg" className="font-normal">
+								Many of us worked on this plan together. Meet the people who helped make it happen.
+							</Text>
+							<Button variant="default" className="w-fit" asChild>
+								<Link href="/co-creators">
+									See all co-creators
+									<ArrowRightIcon />
+								</Link>
+							</Button>
+						</div>
+						<div className="col-span-12 md:col-span-8">
+							<CoordinatingTeam />
+						</div>
+					</div>
+				</Container>
+			</section>
 		</React.Fragment>
+	);
+}
+
+async function getCoordinatingTeam(): Promise<Profile[]> {
+	try {
+		const coordinators = await directus.request(
+			readItems("profiles", {
+				filter: {
+					is_coordinator: { _eq: true },
+					status: { _eq: "published" },
+				},
+				fields: ["id", "display_name", "display_blurb", "profile_image", "status", "is_coordinator"],
+			}),
+		);
+
+		return coordinators.map((c) => {
+			return {
+				...c,
+				profile_image: c.profile_image ? getDirectusAssetUrl(c.profile_image) : undefined,
+			};
+		});
+	} catch (error) {
+		console.error("Failed to fetch coordinating team:", error);
+		return [];
+	}
+}
+
+async function CoordinatingTeam() {
+	const profiles = await getCoordinatingTeam();
+
+	return (
+		<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+			{profiles.map((profile) => {
+				return (
+					<div
+						key={profile.id}
+						className="flex gap-4 items-center"
+					>
+						<div className="relative h-16 w-16">
+							<Image
+								src={profile.profile_image!}
+								alt={profile.display_name}
+								fill
+								className="object-cover object-[center_20%] rounded-full"
+							/>
+						</div>
+						<div>
+							<Text size="md">
+								{profile.display_name}
+							</Text>
+							<Text
+								className="text-brand-medium-green text-sm truncate max-w-20"
+							>
+								{profile.display_blurb}
+							</Text>
+						</div>
+					</div>
+				);
+			})}
+		</div>
 	);
 }
 
