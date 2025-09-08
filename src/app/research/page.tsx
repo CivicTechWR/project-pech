@@ -41,13 +41,21 @@ const FeatureChangeCardItems: Array<FeatureChangeCardProps> = [
 			</Text>,
 			// eslint-disable-next-line react/no-missing-key
 			<Text size="md" as="span">
-				We've opened a shelter for women and gender-diverse people.
+				We've created more
+				{" "}
+				<ExternalLink href="https://ywcacambridge.ca/shelter/" className="text-brand-medium-green">
+					shelter spaces for women and gender-diverse people
+				</ExternalLink>
+				.
 			</Text>,
 			// eslint-disable-next-line react/no-missing-key
 			<Text size="md" as="span">
-				Learn about the Region of Waterloo's Building Better Futures Plan
+				Learn about the Region of Waterloo's
 				{" "}
-				<ExternalLink href="https://www.regionofwaterloo.ca/en/living-here/affordable-housing-plan.aspx" className="text-brand-medium-green">[LINK]</ExternalLink>
+				<ExternalLink href="https://www.regionofwaterloo.ca/en/living-here/affordable-housing-plan.aspx" className="text-brand-medium-green">
+					Building Better Futures Plan
+				</ExternalLink>
+				{" "}
 			</Text>,
 		],
 	},
@@ -107,14 +115,14 @@ const FeatureChangeCardItems: Array<FeatureChangeCardProps> = [
 				size="md"
 				as="span"
 			>
-				We’ve launched a program to help people pay their rent
+				We’ve launched a supplement program to help people pay their rent
 			</Text>,
 			// eslint-disable-next-line react/no-missing-key
 			<Text
 				size="md"
 				as="span"
 			>
-				We’ve built new supports for the workers who help people without housing.
+				We’re introducing new supports for the workers who help people without housing.
 			</Text>,
 		],
 	},
@@ -163,7 +171,10 @@ export default function ResearchPage() {
 						<div className="relative">
 							<section className="max-w-2xl flex flex-col gap-8">
 								<Heading as="p" size="md" className="text-brand-grey">
-									More than half of all known homelessness in Ontario is chronic
+									<ExternalLink href="https://www.amo.on.ca/sites/default/files/assets/DOCUMENTS/Reports/2025/2025-01-08-EndingChronicHomelessnessinOntario.pdf" className="text-brand-medium-green">
+										More than half
+									</ExternalLink>
+									of all known homelessness in Ontario is chronic.
 								</Heading>
 								<div className="flex gap-4">
 									{[...Array.from({ length: 10 })].map((_, index) => (
@@ -191,24 +202,24 @@ export default function ResearchPage() {
 								<Text size="md" className="text-brand-grey">
 									Since 2020, chronic homelessness in Waterloo Region has grown by
 									{" "}
-									<Link href="https://waterlooregion.org/sites/default/files/PECHKeyFindingsReport_DRAFT.pdf" className="text-brand-medium-green">
+									<ExternalLink href="https://waterlooregion.org/sites/default/files/PECHKeyFindingsReport_DRAFT.pdf" className="text-brand-medium-green">
 										<strong>28%</strong>
 										{" "}
 										each year
-									</Link>
+									</ExternalLink>
 									.
 								</Text>
 								<Text size="md" className="text-brand-grey">
 									On October 22, 2024,
 									{" "}
-									<Link
+									<ExternalLink
 										href="https://www.regionofwaterloo.ca/en/living-here/resources/Housing-Services/137392-CS---PIT-Count-Infographic_Accessibility.pdf"
 										className="text-brand-medium-green"
 									>
 										<strong>2,371 people</strong>
 										{" "}
 										were experiencing homelessness in Waterloo Region
-									</Link>
+									</ExternalLink>
 									. With only
 									{" "}
 									<strong>301 shelter beds</strong>
@@ -232,7 +243,13 @@ export default function ResearchPage() {
 						<div className="relative">
 							<section className="max-w-xl flex flex-col gap-8">
 								<Heading as="p" size="md" className="text-brand-grey">
-									5 main reasons people in Waterloo Region are experiencing homelessness:
+									<ExternalLink
+										href="https://www.regionofwaterloo.ca/en/living-here/resources/Housing-Services/137392-CS---PIT-Count-Infographic_Accessibility.pdf"
+										className="text-brand-medium-green"
+									>
+										5 main reasons
+									</ExternalLink>
+									people in Waterloo Region are experiencing homelessness:
 								</Heading>
 								<div className="flex flex-col gap-4">
 									<ul className="list-disc list-inside">
@@ -281,27 +298,30 @@ export default function ResearchPage() {
 						<div className="relative">
 							<section className="max-w-xl flex flex-col gap-8">
 								<Heading as="p" size="md" className="text-brand-grey">
-									45% of family homelessness cases caused by gender-based violence
+									45% of family homelessness cases are caused by gender-based violence.
 								</Heading>
 								<Text size="md" className="text-brand-grey">
-									In local research, 83% of women said they stayed in an abusive housing situation because it felt safer than being unhoused, contributing to hidden homelessness.
+									In local research,
 									{" "}
-									<Link
+									<ExternalLink
 										className="text-brand-medium-green"
-										href="https://caeh.ca/wp-content/uploads/WH6-%E2%80%98Dont-Tell-People-Youre-Homeless-Experiences-of-Safety-Violence-and-Justice-among-Womens-Emergency-Shelter-Users.pdf"
+										href="https://www.ywcacambridge.ca/wp-content/uploads/2023/07/Project-Willow-Report.pdf"
 									>
-										[LINK]
-									</Link>
+										83% of women said they stayed in an abusive housing situation because it felt safer than being unhoused
+									</ExternalLink>
+									, contributing to hidden homelessness.
 								</Text>
 								<Text size="md" className="text-brand-grey">
-									In a 2023 region-wide survey, 13% of young people said that they had experienced homelessness.
+									In a 2023 region-wide survey,
 									{" "}
-									<Link
+									<ExternalLink
 										className="text-brand-medium-green"
 										href="https://childrenandyouthplanningtable.ca/wp-content/uploads/2024/08/HOMELESSNESS-Snapshot-YOUTH-IMPACT-SURVEY-Fast-Facts-V2-FINAL.pdf"
 									>
-										[LINK]
-									</Link>
+										13% of youth aged 9 to 18 said that they had experienced homelessness
+									</ExternalLink>
+									. Most of the youth had experienced hidden homelessness but 3% shared that they had experienced visible homelessness.
+									{" "}
 								</Text>
 							</section>
 							<BlockIllustration
@@ -316,7 +336,7 @@ export default function ResearchPage() {
 						<div className="relative">
 							<section className="max-w-xl flex flex-col gap-12">
 								<Heading as="p" size="md" className="text-brand-grey">
-									High rents and low wages contribute to housing loss
+									High rent and low-income support contributes to housing loss.
 								</Heading>
 								<div className="flex justify-evenly items-center gap-4">
 									<div className="flex flex-col gap-2 items-center">
@@ -343,14 +363,25 @@ export default function ResearchPage() {
 									</div>
 								</div>
 								<Text size="md" className="text-brand-grey">
-									There is no rent control for housing built after 2018, so we are losing affordable housing. As one lived expert said: “Affordable housing means rent control. People on fixed incomes can't handle big rent increases without harming their health.”
+									Rising rents and disproportionately impacts people with disabilities, and they are
 									{" "}
-									<Link
+									<ExternalLink
+										className="text-brand-medium-green"
+										href="https://www.chrc-ccdp.gc.ca/our-work/monitoring-canada-human-rights-obligations/monitoring-disability-rights/right-housing-people-disabilities#results"
+									>
+										more than two times likely to live in core housing need
+									</ExternalLink>
+									.
+								</Text>
+								<Text size="md" className="text-brand-grey">
+									There is no rent control for housing built after 2018, so we are losing affordable housing. As one lived expert said:
+									{" "}
+									<ExternalLink
 										className="text-brand-medium-green"
 										href="https://caeh.ca/wp-content/uploads/WH6-%E2%80%98Dont-Tell-People-Youre-Homeless-Experiences-of-Safety-Violence-and-Justice-among-Womens-Emergency-Shelter-Users.pdf"
 									>
-										[LINK]
-									</Link>
+										“Affordable housing means rent control. People on fixed incomes can't handle big rent increases without harming their health.”
+									</ExternalLink>
 								</Text>
 
 							</section>
@@ -363,13 +394,38 @@ export default function ResearchPage() {
 								)}
 							/>
 						</div>
+						<div className="relative">
+							<section className="max-w-xl flex flex-col gap-8">
+								<Heading as="p" size="md" className="text-brand-grey">
+									We don't have enough shelter beds or transitional housing units.
+								</Heading>
+								<Text size="md" className="text-brand-grey">
+									Many unhoused people can't find a safe space that meets their needs; shelter spaces often have rules about who can stay, which leaves gaps for couples, 2SLGBTQ+ people, and those with pets.
+								</Text>
+								<Text size="md" className="text-brand-grey">
+									This leaves people with no choice but to live outside. 41% of people counted as experiencing homelessness in Waterloo Region in 2024 were living rough.
+								</Text>
+							</section>
+							<BlockIllustration
+								className={cn(
+									"absolute top-0 right-35",
+									"hidden xl:block",
+									"rotate-[-17.5deg]",
+									"scale-125",
+								)}
+							/>
+						</div>
+
 						<section className="flex flex-row items-center flex-wrap xl:flex-nowrap space-between">
 							<div className="flex flex-col gap-8">
 								<Heading as="p" size="md" className="text-brand-grey">
-									Even with shelters and housing supports, many people can't find a safe place that meets their needs.
+									There is a long waiting list for subsidized housing in Waterloo Region.
 								</Heading>
 								<Text size="md" className="text-brand-grey">
-									Shelter spaces are often for specific groups, which leaves gaps for couples, 2SLGBTQ+ people, and those with pets. Rising rents, low incomes that can't keep up with the cost of living, and the loss of deeply affordable and therapeutic housing has damaged our whole housing system.
+									The number of people on the waiting list for subsidized housing increased by 44 per cent in Waterloo Region between 2020 and 2023.
+								</Text>
+								<Text size="md" className="text-brand-grey">
+									A shortage of subsidized housing, along with rising rents and income that can't keep up with the cost of living has put even more pressure on a system under strain.
 								</Text>
 							</div>
 							<div>
@@ -386,7 +442,7 @@ export default function ResearchPage() {
 							We're changing the system
 						</Heading>
 						<Text size="md">
-							It is time to rebuild our system to create something more resilient and transformed, or even a new kind of structure, rather than trying to force pieces to fit where they no longer make sense.
+							It is time to transform our system rather than trying to force pieces to fit where they no longer make sense. We're building a stronger foundation.
 						</Text>
 					</div>
 
