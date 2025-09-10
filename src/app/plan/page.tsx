@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
+import FocusCard from "@/components/plan-page/FocusCard";
 import PlanHowYouCanHelp from "@/components/plan-page/sections/PlanHowYouCanHelp";
 import PlanLookingAhead from "@/components/plan-page/sections/PlanLookingAhead";
 import { Container } from "../../components/ui/container";
 import { Heading } from "../../components/ui/heading";
 import { Text } from "../../components/ui/text";
 import { cn } from "../../lib/utils";
+import { focusCards } from "./focus-cards";
 import { HeroIllustration } from "./hero-illustration";
 
 export const metadata: Metadata = {
@@ -44,15 +46,20 @@ export default function PlanPage() {
 				</Container>
 			</main>
 			<section
-				className="bg-brand-yellow"
+				className="bg-brand-yellow py-16"
 			>
-				<Container>
+				<Container size="6xl" className="flex flex-col gap-8">
 					<Heading
 						size="lg"
 						className="text-brand-dark-green text-left"
 					>
 						Our focus areas
 					</Heading>
+					<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+						{focusCards.map(card => (
+							<FocusCard key={card.id} data={card} />
+						))}
+					</div>
 				</Container>
 			</section>
 			<section
