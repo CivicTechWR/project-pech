@@ -23,11 +23,11 @@ export default function RootLayout({
 	return (
 		<html
 			lang="en"
-			className={`${geist.variable} antialiased`}
+			className={`${geist.variable} antialiased overflow-x-hidden`}
 		>
-			<body className="antialiased overflow-x-hidden">
+			<body className="antialiased">
 				<Header />
-				<main className="pt-16 bg-brand-white overflow-x-hidden">{children}</main>
+				<main className="pt-16 bg-brand-white">{children}</main>
 				<Footer />
 			</body>
 		</html>
