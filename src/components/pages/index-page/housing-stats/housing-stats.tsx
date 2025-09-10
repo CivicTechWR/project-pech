@@ -1,7 +1,6 @@
 /* eslint-disable react/no-array-index-key */
 "use client";
 import type { DashboardData } from "../../../../lib/directus";
-import { formatDate } from "date-fns";
 import { ArrowLeftIcon, ArrowRightIcon } from "lucide-react";
 import React from "react";
 import { HumanIllustration } from "../../../illustrations/human";
@@ -20,7 +19,7 @@ export interface HousingStatsProps {
 		| "Housed_N_Chronic"
 		| "Outflow"
 		| "New_Chronic_Y_Inflow"
-	> & { date: Date }>;
+	> & { label: string; date_ms: number }>;
 }
 
 export function HousingStats({ data }: HousingStatsProps) {
@@ -148,7 +147,7 @@ function DataSelector({
 }: DataSelectorProps) {
 	return (
 		<div className="flex gap-4">
-			<Heading className="text-brand-dark-green underline" as="span">{formatDate(dataPoint.date, "MMM yyyy")}</Heading>
+			<Heading className="text-brand-dark-green underline" as="span">{dataPoint.label}</Heading>
 			<div className="flex flex-row gap-4 items-center">
 				<Button
 					aria-label="See the previous month's data"

@@ -18,20 +18,39 @@ async function FetchDashboardData() {
 		}),
 	);
 
-	const sorted_data = data.map((d) => {
-		const Year_Month = d.Year_Month;
+	const MONTH_LABELS = [
+		"Jan",
+		"Feb",
+		"Mar",
+		"Apr",
+		"May",
+		"Jun",
+		"Jul",
+		"Aug",
+		"Sep",
+		"Oct",
+		"Nov",
+		"Dec",
+	];
 
-		const [year, month] = Year_Month.split("-");
+	const sorted_data = data
+		.map((d) => {
+			const Year_Month = d.Year_Month;
 
-		const year_num = Number.parseInt(year);
+			const [year, month] = Year_Month.split("-");
 
-		const month_num = Number.parseInt(month);
+			const year_num = Number.parseInt(year, 10);
 
-		// Subtracting 1 from month as js dates are 0 based
-		const date = new Date(year_num, month_num - 1);
+			const month_num = Number.parseInt(month, 10);
 
-		return { ...d, date };
-	}).sort((a, b) => a.date.getUTCMilliseconds() - b.date.getUTCMilliseconds());
+			// Use UTC to avoid timezone-dependent shifts
+			const date_ms = Date.UTC(year_num, month_num - 1, 1);
+
+			const label = `${MONTH_LABELS[month_num - 1]} ${year_num}`;
+
+			return { ...d, label, date_ms };
+		})
+		.sort((a, b) => a.date_ms - b.date_ms);
 
 	return sorted_data;
 }

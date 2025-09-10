@@ -9,7 +9,8 @@ export interface HousingStatsDatapoint extends Pick<
 	| "Outflow"
 	| "New_Chronic_Y_Inflow"
 > {
-	date: Date;
+	label: string;
+	date_ms: number;
 }
 
 export interface HousingStatsState {
@@ -79,7 +80,7 @@ export function HousingStatsStateReducer(
 			};
 		}
 		default:{
-			const exhaustive: never = action;
+			const exhaustive: never = action as never;
 			throw new Error(`unhandled action: ${exhaustive}`);
 		}
 	}
