@@ -1,17 +1,17 @@
 "use client";
 
-import type { FocusCardData } from "@/app/plan/focus-cards";
-import { Maximize2 } from "lucide-react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
-
 import Image from "next/image";
 import { useEffect, useId, useMemo, useRef, useState } from "react";
+
 import { Button } from "@/components/ui/button";
 import { Card, CardAction, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Dialog, DialogContent, DialogOverlay, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Dialog, DialogClose, DialogContent, DialogOverlay, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import type { FocusCardData } from "@/app/plan/focus-cards";
 import { cn } from "@/lib/utils";
 import { Heading } from "../ui/heading";
 import { Text } from "../ui/text";
+import { Maximize2, Minimize2 } from "lucide-react";
 
 export interface FocusCardProps {
 	data: FocusCardData;
@@ -109,7 +109,7 @@ export function FocusCard({ data, className }: FocusCardProps) {
 					? (
 						<>
 							<DialogOverlay />
-							<DialogContent id={`${layoutBaseId}-dialog`} className="max-w-4xl p-0 overflow-hidden" showCloseButton>
+							<DialogContent id={`${layoutBaseId}-dialog`} className="max-w-4xl p-0 overflow-hidden" showCloseButton={false}>
 								<motion.div
 									layoutId={`${layoutBaseId}-container`}
 									className="bg-background"
@@ -129,11 +129,25 @@ export function FocusCard({ data, className }: FocusCardProps) {
 									</div>
 
 									<div className="px-6 py-5 flex flex-col gap-4">
-										<Heading size="sm" asChild>
-											<DialogTitle>
-												{data.title}
-											</DialogTitle>
-										</Heading>
+										<div className="flex items-center justify-between gap-3">
+											<Heading size="sm" asChild>
+												<DialogTitle>
+													{data.title}
+												</DialogTitle>
+											</Heading>
+											<DialogClose asChild>
+												<Button
+													size="sm"
+													variant="secondary"
+													aria-label="Collapse"
+													aria-controls={`${layoutBaseId}-dialog`}
+													className="outline outline-solid outline-brand-black/50 flex items-center"
+												>
+													Collapse
+													<Minimize2 className="h-4 w-4" />
+												</Button>
+											</DialogClose>
+										</div>
 										<Text size="sm" className="text-brand-dark-green">
 											{data.summary}
 										</Text>
