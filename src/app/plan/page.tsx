@@ -46,7 +46,7 @@ export default function PlanPage() {
 				</Container>
 			</main>
 			<section
-				className="bg-brand-yellow py-16"
+				className="bg-brand-white py-16"
 			>
 				<Container size="6xl" className="flex flex-col gap-8">
 					<Heading
