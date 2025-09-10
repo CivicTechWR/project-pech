@@ -70,7 +70,7 @@ export default function HelpPage() {
 					size="6xl"
 					className={cn(
 						"flex flex-row items-end justify-between gap-16",
-						"py-16 md: mt-[-6rem] overflow-hidden",
+						"py-16 md:mt-[-6rem] overflow-hidden",
 					)}
 				>
 					<div className="max-w-xl text-brand-black flex flex-col gap-4">
