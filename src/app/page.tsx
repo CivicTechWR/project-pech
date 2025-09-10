@@ -16,8 +16,14 @@ import { HousingStatsContainer } from "../components/pages/index-page/housing-st
 import { Button } from "../components/ui/button";
 import { getDirectusAssetUrl } from "../lib/assets";
 import { directus, readItems } from "../lib/directus";
+import { Metadata } from "next";
 
 export const dynamic = "force-dynamic";
+
+export const metadata:Metadata = {
+	title:"Plan to End Chronic Homelessness Waterloo Region",
+	description:"A community-driven plan to end chronic homelessness in Waterloo Region with clear goals, timelines, data, and ways to get involved."
+};
 
 const IllustrationWithCopyItems: Array<IllustrationWithCopyProps> = [
 	{

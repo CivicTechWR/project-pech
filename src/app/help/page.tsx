@@ -12,6 +12,13 @@ import { PersonHoldingBabyWithHouseIllustration } from "./person-holding-baby-wi
 import { PersonWalkingByBuildingIllustration } from "./person-walking-by-building-illustration";
 import { SharedGoalsIllustrations } from "./shared-goals-illustrations";
 import { TextingPersonIllustration } from "./texting-person-illustration";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+	title: "Get housing help Waterloo Region",
+	description:
+    "Find emergency shelter, eviction prevention, and housing support in Waterloo Region. Call 24/7 or connect with local programs to stay housed.",
+};
 
 export default function HelpPage() {
 	return (

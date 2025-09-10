@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import CoCreatorsList from "@/components/co-creators/CoCreatorsList";
-
 import CoordinatingTeam from "@/components/co-creators/CoordinatingTeam";
 import { ExternalLink } from "../../components/external-link";
 import { ButtonVariants } from "../../components/ui/button";
@@ -10,6 +9,13 @@ import { Heading } from "../../components/ui/heading";
 import { Text } from "../../components/ui/text";
 import { cn } from "../../lib/utils";
 import { HeaderCopyIllustration } from "./header-copy-illustration";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+	title: "Co-creators Plan to End Chronic Homelessness Waterloo Region",
+	description:
+    "Meet the co-creators and coordinating team leading Waterloo Region’s plan to end chronic homelessness by 2030.",
+};
 
 export default function CoCreators() {
 	return (

@@ -20,6 +20,13 @@ import { FallenBlocksIllustration } from "./fallen-blocks-illustration";
 import { ResearchHeaderCopyIllustration } from "./header-copy-illustration";
 import { HouseIllustration } from "./house-illustration";
 import { SolidHouseIllustration } from "./solid-house-illustration";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+	title: "Waterloo Region housing data chronic homelessness",
+	description:
+    "Discover key stats on housing in Waterloo Region, from rent costs to shelter space, and learn how we can work together to end chronic homelessness.",
+};
 
 const FeatureChangeCardItems: Array<FeatureChangeCardProps> = [
 	{

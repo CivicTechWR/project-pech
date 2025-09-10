@@ -8,9 +8,9 @@ import { cn } from "../../lib/utils";
 import { HeroIllustration } from "./hero-illustration";
 
 export const metadata: Metadata = {
-	title: "The Plan",
+	title: "Plan to End Chronic Homelessness Waterloo Region 2030",
 	description:
-    "The Plan to End Chronic Homelessness is Waterloo Region's roadmap to make sure everyone has a safe, stable home. It was created with input from people with lived experience, service providers, community groups, and local government.",
+    "Waterloo Region’s roadmap to reach functional zero by 2030 with clear focus areas, priority actions, and community-led solutions to end homelessness.",
 };
 
 export default function PlanPage() {
