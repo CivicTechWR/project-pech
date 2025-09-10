@@ -108,10 +108,10 @@ export default function Home() {
 						})}
 					</div>
 					<div className="flex flex-col items-start">
-						<Heading size="sm" className="font-serif font-normal" as="h3">
+						<Heading size="xs" className="font-normal" as="h3">
 							"Housing is both a human right and a speculative commodity from which to extract wealth. Therein lies the crux of the housing problem. Until we fully reconcile these contradictory roles that housing plays, we will be in a perpetual state of crisis."
 						</Heading>
-						<Text size="xl" className="font-serif">
+						<Text size="xl">
 							—(Doucet, Mcdougall and Jay 2023) (LE Prototyping Cohort, 2024)
 						</Text>
 					</div>
