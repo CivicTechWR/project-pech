@@ -1,9 +1,11 @@
 import React from "react";
+import { Heading } from "@/components/ui/heading";
+import { Text } from "@/components/ui/text";
 
 /* Spec
    - 3 equal segments (~33.33% each)
    - Two guides exactly at 33.333% and 66.667% (no end markers)
-   - Left: dark, Middle: grey, Right: teal gradient (#095A5A → #71C6AC)
+   - Left: dark, Middle: grey, Right: teal gradient (#095A5A + #71C6AC)
    - Bar height ~40px, rounded outer corners
 */
 
@@ -23,7 +25,7 @@ interface RoadmapSegment {
 	gradient?: boolean;
 }
 
-// Three markers alternating bottom → top → bottom
+// Three markers alternating bottom + top + bottom
 const markers: Mark[] = [
 	{
 		title: "Using data to guide decisions.",
@@ -64,18 +66,18 @@ export default function PlanPhases() {
 		>
 			<div className="max-w-6xl mx-auto px-4 space-y-8">
 				{/* Intro copy matching the provided mock */}
-				<div className="space-y-2">
-					<h2 className="text-3xl font-semibold tracking-tight text-white">
+				<div className="space-y-3">
+					<Heading as="h2" size="md" className="tracking-tight text-white mb-4">
 						Pushing for Big Change Together
-					</h2>
-					<p className="text-neutral-300 max-w-3xl text-sm md:text-base">
+					</Heading>
+					<Text size="sm" className="text-neutral-300 max-w-3xl md:text-base">
 						Lasting change takes teamwork at every level: local, regional, provincial, and national.
 						By joining forces, we can make a bigger impact.
-					</p>
+					</Text>
 				</div>
-				<h3 id="roadmap-title" className="text-2xl font-semibold text-white p-0">
-					What we’re doing in 2025
-				</h3>
+				<Heading as="h3" id="roadmap-title" size="sm" className="text-white p-0 mb-3">
+					What we're doing in 2025
+				</Heading>
 				<RoadmapCanvas />
 				<Legend />
 			</div>
@@ -114,10 +116,10 @@ function RoadmapCanvas() {
 								marginLeft: m.align === "left" ? "0.5rem" : undefined,
 							}}
 						>
-							<div className={`space-y-1 ${m.align === "left" ? "text-left" : "text-center"} min-w-[140px] max-w-[260px]`}>
-								<div className="text-sm font-semibold leading-tight">{m.title}</div>
+							<div className={`space-y-2 ${m.align === "left" ? "text-left" : "text-center"} min-w-[140px] max-w-[260px]`}>
+								<Text as="div" size="sm" weight="semibold" className="leading-tight">{m.title}</Text>
 								{m.caption && (
-									<div className="text-xs text-neutral-300 leading-snug">{m.caption}</div>
+									<Text as="div" size="xs" className="text-neutral-300 leading-snug">{m.caption}</Text>
 								)}
 							</div>
 						</div>
@@ -178,10 +180,10 @@ function RoadmapCanvas() {
 								marginLeft: m.align === "left" ? "0.5rem" : undefined,
 							}}
 						>
-							<div className={`space-y-1 ${m.align === "left" ? "text-left" : "text-center"} min-w-[140px] max-w-[260px]`}>
-								<div className="text-sm font-semibold leading-tight">{m.title}</div>
+							<div className={`space-y-2 ${m.align === "left" ? "text-left" : "text-center"} min-w-[140px] max-w-[260px]`}>
+								<Text as="div" size="sm" weight="semibold" className="leading-tight">{m.title}</Text>
 								{m.caption && (
-									<div className="text-xs text-neutral-300 leading-snug md:block hidden">{m.caption}</div>
+									<Text as="div" size="xs" className="text-neutral-300 leading-snug md:block hidden">{m.caption}</Text>
 								)}
 							</div>
 						</div>

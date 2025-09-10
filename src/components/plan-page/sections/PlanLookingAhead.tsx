@@ -39,14 +39,11 @@ export default function PlanLookingAhead() {
 		>
 			<div className="max-w-6xl mx-auto px-4 space-y-6">
 				<div className="space-y-1">
-					<Heading
-						as="h3"
-						size="lg"
-					>
-						Looking ahead
+					<Heading size="md" className="text-pech-deep-teal">
+						Looking Ahead
 					</Heading>
-					<Text size="xl" className="font-semibold">
-						Our future priority actions
+					<Text size="sm" className="text-neutral-500">
+						Our future Priority Actions
 					</Text>
 				</div>
 
