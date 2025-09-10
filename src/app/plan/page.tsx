@@ -39,7 +39,7 @@ export default function PlanPage() {
 					</div>
 					<HeroIllustration
 						className={cn(
-							"md:mt-20 md:w-172 md:h-172",
+							"md:mt-20 md:w-150 md:h-124",
 							"w-72 h-72",
 						)}
 					/>

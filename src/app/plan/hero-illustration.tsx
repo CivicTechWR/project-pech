@@ -9,7 +9,7 @@ export function HeroIllustration(props: HeroIllustrationProps) {
 		<svg
 			width="443"
 			height="538"
-			viewBox="0 0 443 538"
+			viewBox="0 0 443 400"
 			fill="none"
 			xmlns="http://www.w3.org/2000/svg"
 			{...props}
