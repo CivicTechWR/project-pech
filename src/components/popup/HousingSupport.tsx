@@ -1,7 +1,9 @@
 "use client";
 import * as Dialog from "@radix-ui/react-dialog";
 import { Cross2Icon } from "@radix-ui/react-icons";
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import { Button } from "../ui/button";
 import HousingHelpIllustration from "./housing-help-illustration";
 
 export function HousingSupport() {
@@ -50,9 +52,9 @@ export function HousingSupport() {
 								</p>
 
 								<div className="inline-flex items-center px-4 py-3 bg-pech-yellow border border-[#2F4D4C] rounded-lg">
-									<span className="text-lg lg:text-xl text-[#2F4D4C] font-light">
+									<Link href="tel:519-624-9133" className="text-lg lg:text-xl text-[#2F4D4C] font-light">
 										📞 519-624-9133
-									</span>
+									</Link>
 								</div>
 
 								<p className="text-gray-600">
@@ -63,10 +65,19 @@ export function HousingSupport() {
 									For more housing and community supports, visit our Get Help Now page.
 								</p>
 
-								<button className="bg-brand-dark-green text-white px-6 py-3 rounded-md hover:bg-[#263f3e] transition-colors flex items-center gap-2" type="submit">
-									Find help now
-									<span className="text-lg">→</span>
-								</button>
+								<Button
+									asChild
+									className="w-fit bg-brand-dark-green text-white px-6 py-3 rounded-md hover:bg-[#263f3e] transition-colors flex items-center gap-2"
+									type="submit"
+									onClick={() => {
+										setOpen(false);
+									}}
+								>
+									<Link href="/help">
+										Find help now
+										<span className="text-lg">→</span>
+									</Link>
+								</Button>
 							</div>
 							<div className="hidden min-[1100px]:flex justify-center">
 								<HousingHelpIllustration />

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { HousingSupport } from "../components/popup/HousingSupport";
 import "./globals.css";
 
 const geist = Geist({
@@ -27,6 +28,7 @@ export default function RootLayout({
 		>
 			<body className="antialiased">
 				<Header />
+				<HousingSupport />
 				<main className="pt-16 bg-brand-white">{children}</main>
 				<Footer />
 			</body>
