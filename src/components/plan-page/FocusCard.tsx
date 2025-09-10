@@ -109,7 +109,7 @@ export function FocusCard({ data, className }: FocusCardProps) {
 					? (
 						<>
 							<DialogOverlay />
-							<DialogContent id={`${layoutBaseId}-dialog`} className="max-w-4xl p-0 overflow-hidden" showCloseButton={false}>
+							<DialogContent id={`${layoutBaseId}-dialog`} className="max-w-4xl p-0 max-h-[90svh] overflow-y-auto" showCloseButton={false}>
 								<motion.div
 									layoutId={`${layoutBaseId}-container`}
 									className="bg-background"
