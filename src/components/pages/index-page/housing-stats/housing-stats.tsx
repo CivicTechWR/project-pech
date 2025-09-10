@@ -58,7 +58,7 @@ export function HousingStats({ data }: HousingStatsProps) {
 
 	return (
 		<React.Fragment>
-			<Heading size="lg" className="font-bold inline-flex flex-wrap lg:flex-flex-nowrap gap-4 items-center">
+			<Heading size="lg" className="font-bold inline-flex flex-wrap lg:flex-nowrap gap-4 items-center">
 				Total people housed for
 				<DataSelector
 					isNextDataPointDisabled={!isNextDataPointAvailable}
@@ -68,19 +68,19 @@ export function HousingStats({ data }: HousingStatsProps) {
 					dataPoint={currentDataPoint}
 				/>
 			</Heading>
-			<div className="grid grid-cols-12 gap-8 items-center">
+			<div className="grid grid-cols-12 gap-4 md:gap-8 items-start md:items-center">
 				<div className="col-span-12 md:col-span-8">
 					<div className="flex flex-col gap-8">
-						<div className="flex items-center gap-20">
+						<div className="flex flex-col sm:flex-row items-start sm:items-center gap-8 sm:gap-20">
 							<Heading size="2xl" className="text-brand-dark-green">
 								{totalHoused}
 							</Heading>
-							<div className="grid grid-cols-10 gap-2">
+							<div className="grid grid-cols-5 sm:grid-cols-8 md:grid-cols-10 gap-1 sm:gap-2 max-w-full overflow-hidden">
 								{[...Array.from({ length: housedChronic })]
 									.map((_, idx) => {
 										return (
 											<HumanIllustration
-												className="h-10"
+												className="h-6 sm:h-8 md:h-10"
 												variant="brand-medium-green"
 												key={`housed-chronic-human-illustration:${idx}`}
 											/>
@@ -90,7 +90,7 @@ export function HousingStats({ data }: HousingStatsProps) {
 									.map((_, idx) => {
 										return (
 											<HumanIllustration
-												className="h-10"
+												className="h-6 sm:h-8 md:h-10"
 												variant="brand-grey"
 												key={`housed-non-chronic-human-illustration:${idx}`}
 											/>
@@ -98,7 +98,7 @@ export function HousingStats({ data }: HousingStatsProps) {
 									})}
 							</div>
 						</div>
-						<div className="ml-auto flex gap-4 justify-end">
+						<div className="ml-0 sm:ml-auto flex gap-4 justify-start sm:justify-end">
 							<div className="flex gap-2 items-center">
 								<div className="h-4 w-4 rounded-full bg-brand-medium-green" />
 								<Text size="sm">
@@ -115,11 +115,11 @@ export function HousingStats({ data }: HousingStatsProps) {
 						</div>
 
 					</div>
-					<Text size="lg" className="text-brand-grey mt-8">
+					<Text size="lg" className="text-brand-grey mt-4 md:mt-8">
 						Chronic homelessness is defined as experiencing homelessness for a total of at least six months in the past year, or lots of episodes of homelessness over the past three years that total at least 18 months.
 					</Text>
 				</div>
-				<div className="col-span-12 md:col-span-4">
+				<div className="col-span-12 md:col-span-4 mt-4 md:mt-0">
 					<div className="flex flex-col gap-4">
 						<FlowCard type="outflow" stat={outflowStat} />
 						<FlowCard type="inflow"stat={inflowStat} />
@@ -189,11 +189,11 @@ function FlowCard({ stat, type }: FlowCardProps) {
 					</Heading>
 				</CardTitle>
 				<CardContent>
-					<div className="flex w-full justify-between items-center gap-4">
+					<div className="flex w-full justify-between items-center gap-2 sm:gap-4">
 						<Heading as="p" size="xl" className="font-semibold text-brand-grey">
 							{stat}
 						</Heading>
-						<Arrow className="h-24 w-36" />
+						<Arrow className="h-16 w-24 sm:h-20 sm:w-32 md:h-24 md:w-36 flex-shrink-0" />
 					</div>
 				</CardContent>
 			</CardHeader>

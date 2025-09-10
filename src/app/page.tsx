@@ -108,10 +108,10 @@ export default function Home() {
 						})}
 					</div>
 					<div className="flex flex-col items-start">
-						<Heading size="xs" className="font-normal" as="h3">
+						<Heading size="xs" className="font-normal break-words" as="h3">
 							"Housing is both a human right and a speculative commodity from which to extract wealth. Therein lies the crux of the housing problem. Until we fully reconcile these contradictory roles that housing plays, we will be in a perpetual state of crisis."
 						</Heading>
-						<Text size="xl">
+						<Text size="xl" className="break-words">
 							—(Doucet, Mcdougall and Jay 2023) (LE Prototyping Cohort, 2024)
 						</Text>
 					</div>
@@ -148,7 +148,7 @@ export default function Home() {
 			<section className="bg-brand-white text-brand-grey py-20">
 				<Container size="6xl" className="flex flex-col gap-2">
 					<Heading as="h3" size="md" className="font-normal">Our goal</Heading>
-					<div className="grid grid-cols-12 gap-8">
+					<div className="grid grid-cols-12 gap-4 md:gap-8">
 						<div className="col-span-12 md:col-span-8 flex flex-col gap-6">
 							<Heading as="h4" size="lg" className="font-bold text-brand-black">
 								Help us reach functional zero by 2030
@@ -166,10 +166,10 @@ export default function Home() {
 								</Link>
 							</Button>
 						</div>
-						<div>
+						<div className="col-span-12 md:col-span-4">
 							<HouseWithMagnifyingLensIllustration
 								className={cn(
-									"w-120 h-120",
+									"w-full h-auto max-w-xs mx-auto",
 									"hidden md:block",
 								)}
 							/>
@@ -180,7 +180,7 @@ export default function Home() {
 			</section>
 			<section className=" text-brand-grey py-10">
 				<Container size="6xl" className="flex flex-col gap-2">
-					<div className="grid grid-cols-12">
+					<div className="grid grid-cols-12 gap-4 md:gap-8">
 						<div className="col-span-12 md:col-span-4 flex flex-col gap-6">
 							<Heading size="lg" className="font-bold text-brand-black">
 								Meet the Co-Creators
@@ -233,7 +233,7 @@ async function CoordinatingTeam() {
 	const profiles = await getCoordinatingTeam();
 
 	return (
-		<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+		<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
 			{profiles.map((profile) => {
 				return (
 					<div
@@ -253,7 +253,7 @@ async function CoordinatingTeam() {
 								{profile.display_name}
 							</Text>
 							<Text
-								className="text-brand-medium-green text-sm truncate max-w-20"
+								className="text-brand-medium-green text-sm truncate max-w-[80px] sm:max-w-[100px]"
 							>
 								{profile.display_blurb}
 							</Text>

@@ -25,9 +25,9 @@ export default function RootLayout({
 			lang="en"
 			className={`${geist.variable} antialiased`}
 		>
-			<body className="antialiased">
+			<body className="antialiased overflow-x-hidden">
 				<Header />
-				<main className="pt-16 bg-brand-white">{children}</main>
+				<main className="pt-16 bg-brand-white overflow-x-hidden">{children}</main>
 				<Footer />
 			</body>
 		</html>
