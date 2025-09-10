@@ -7,6 +7,7 @@ interface Profile {
 	display_name: string;
 	display_blurb: string;
 	is_coordinator: boolean;
+	knowledge_expertise?: string[];
 }
 
 export interface DashboardData {

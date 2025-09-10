@@ -2,6 +2,7 @@
 
 import type { Profile } from "@/lib/directus";
 import Image from "next/image";
+import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { getDirectusAssetUrl } from "@/lib/assets";
 import { directus, readItems } from "@/lib/directus";
@@ -17,7 +18,7 @@ async function getCoordinatingTeam(): Promise<Profile[]> {
 					is_coordinator: { _eq: true },
 					status: { _eq: "published" },
 				},
-				fields: ["id", "display_name", "display_blurb", "profile_image", "status", "is_coordinator"],
+				fields: ["id", "display_name", "display_blurb", "profile_image", "status", "is_coordinator", "knowledge_expertise"],
 			}),
 		);
 
@@ -69,7 +70,20 @@ export default async function CoordinatingTeam() {
 							</div>
 							<CardContent className="pt-0">
 								<h3 className="text-lg font-semibold mb-2">{member.display_name}</h3>
-								<p className="text-sm text-gray-600">{member.display_blurb}</p>
+								{member.knowledge_expertise && member.knowledge_expertise.length > 0 && (
+									<div className="flex flex-wrap gap-1">
+										{member.knowledge_expertise.map((expertise: string) => (
+											<Badge
+												key={`${member.id}-${expertise}`}
+												variant="default"
+												className="text-xs"
+											>
+												{expertise}
+											</Badge>
+										))}
+									</div>
+								)}
+								<p className="text-sm my-3 text-gray-600">{member.display_blurb}</p>
 							</CardContent>
 						</Card>
 					))}
