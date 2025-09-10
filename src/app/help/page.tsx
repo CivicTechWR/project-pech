@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { ArrowRightIcon, InfoIcon } from "lucide-react";
 import Link from "next/link";
 import React from "react";
@@ -12,7 +13,6 @@ import { PersonHoldingBabyWithHouseIllustration } from "./person-holding-baby-wi
 import { PersonWalkingByBuildingIllustration } from "./person-walking-by-building-illustration";
 import { SharedGoalsIllustrations } from "./shared-goals-illustrations";
 import { TextingPersonIllustration } from "./texting-person-illustration";
-import { Metadata } from "next";
 
 export const metadata: Metadata = {
 	title: "Get housing help Waterloo Region",

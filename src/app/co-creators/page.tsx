@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import CoCreatorsList from "@/components/co-creators/CoCreatorsList";
@@ -9,7 +10,6 @@ import { Heading } from "../../components/ui/heading";
 import { Text } from "../../components/ui/text";
 import { cn } from "../../lib/utils";
 import { HeaderCopyIllustration } from "./header-copy-illustration";
-import { Metadata } from "next";
 
 export const metadata: Metadata = {
 	title: "Co-creators Plan to End Chronic Homelessness Waterloo Region",

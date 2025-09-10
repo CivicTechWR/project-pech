@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { ArrowRightIcon } from "lucide-react";
 import Link from "next/link";
 import { HalfHumanIllustration } from "@/components/illustrations/half-human";
@@ -20,7 +21,6 @@ import { FallenBlocksIllustration } from "./fallen-blocks-illustration";
 import { ResearchHeaderCopyIllustration } from "./header-copy-illustration";
 import { HouseIllustration } from "./house-illustration";
 import { SolidHouseIllustration } from "./solid-house-illustration";
-import { Metadata } from "next";
 
 export const metadata: Metadata = {
 	title: "Waterloo Region housing data chronic homelessness",
