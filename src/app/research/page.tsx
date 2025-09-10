@@ -360,7 +360,7 @@ export default function ResearchPage() {
 								<Heading as="p" size="md" className="text-brand-grey">
 									High rent and low-income support contributes to housing loss.
 								</Heading>
-								<div className="flex justify-evenly items-center gap-4">
+								<div className="flex justify-evenly items-center flex-wrap md:flex-nowrap gap-4">
 									<div className="flex flex-col gap-2 items-center">
 										<DollarSignIllustration className="h-36" />
 										<div className="flex flex-col gap-2 items-center">
