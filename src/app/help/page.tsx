@@ -30,7 +30,7 @@ export default function HelpPage() {
 			>
 				<Link
 					href="https://www.google.ca"
-					className="w-screen flex items-center gap-2 justify-center"
+					className="w-full flex items-center gap-2 justify-center"
 				>
 					<InfoIcon className="h-4 w-4" />
 					<Text size="md" as="span">
