@@ -1,17 +1,17 @@
 "use client";
 
+import type { FocusCardData } from "@/app/plan/focus-cards";
+import { Maximize2, Minimize2 } from "lucide-react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
+
 import Image from "next/image";
 import { useEffect, useId, useMemo, useRef, useState } from "react";
-
 import { Button } from "@/components/ui/button";
 import { Card, CardAction, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Dialog, DialogClose, DialogContent, DialogOverlay, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import type { FocusCardData } from "@/app/plan/focus-cards";
 import { cn } from "@/lib/utils";
 import { Heading } from "../ui/heading";
 import { Text } from "../ui/text";
-import { Maximize2, Minimize2 } from "lucide-react";
 
 export interface FocusCardProps {
 	data: FocusCardData;
