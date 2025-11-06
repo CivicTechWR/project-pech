@@ -36,6 +36,7 @@ npm run check-types  # TypeScript type checking
 
 ## Contributing
 
+
 This is a CivicTechWR community project. Join us at our weekly hacknights!
 
 - **Meetup:** https://www.meetup.com/civictechwr/
