@@ -17,6 +17,7 @@ import { HousingStatsContainer } from "../components/pages/index-page/housing-st
 import { Button } from "../components/ui/button";
 import { getDirectusAssetUrl } from "../lib/assets";
 import { directus, readItems } from "../lib/directus";
+import { SharedGoalsWhiteBGIllustration } from "./shared-goals-white-bg-illustration";
 
 export const dynamic = "force-dynamic";
 
@@ -176,6 +177,36 @@ export default function Home() {
 						</div>
 
 					</div>
+				</Container>
+			</section>
+			<section className="bg-brand-black text-brand-white py-20">
+				<Container size="6xl" className="grid grid-cols-12 gap-4">
+					<div className="col-span-12 md:col-span-5 flex items-center justify-center">
+						<SharedGoalsWhiteBGIllustration
+							className={cn(
+								"w-full h-auto max-w-sm mx-auto",
+								"hidden md:block",
+							)}
+						/>
+					</div>
+					<div className="col-span-12 md:col-span-7 flex flex-col gap-4">
+						<Heading as="h3" size="md" className="font-bold">
+							Land Acknowledgement
+						</Heading>
+						<div className="flex flex-col gap-6">
+							<Text className="leading-7">
+								We are situated on land that belongs to the Six Nations of the Grand River as ratified in the Haldimand Treaty of 1784. The Region serves an area that is within the traditional territories of the Haudenosaunee Anishinaabe, and Chonnonton, people. This area is governed by the Dish with One Spoon Treaty which requires that the land be peacefully shared while ensuring mutual benefit for all.
+							</Text>
+							<Text className="leading-7">
+								We are committed to understanding the impacts of both settler colonialism and our government’s failures to uphold the responsibilities under the Dish with One Spoon Treaty. We recognize that Indigenous communities continue to experience inequality, systemic oppression, and intergenerational trauma as a result of colonialism.
+							</Text>
+							<Text className="leading-7">
+								We acknowledge the enduring presence, strength, and wisdom of the Indigenous people, as well as their generosity in sharing the land with those of us who are settlers.
+							</Text>
+						</div>
+
+					</div>
+
 				</Container>
 			</section>
 			<section className=" text-brand-grey py-10">
