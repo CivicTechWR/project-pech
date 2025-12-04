@@ -27,15 +27,14 @@ Help Waterloo Region reach **functional zero chronic homelessness by 2030**.
 ## Development
 
 ```bash
-npm install
-npm run dev
-npm run build        # Build for production
-npm run lint         # Run ESLint
-npm run check-types  # TypeScript type checking
+bun install
+bun run dev
+bun run build        # Build for production
+bun run lint         # Run ESLint
+bun run check-types  # TypeScript type checking
 ```
 
 ## Contributing
-
 
 This is a CivicTechWR community project. Join us at our weekly hacknights!
 
