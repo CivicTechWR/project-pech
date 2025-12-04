@@ -471,6 +471,71 @@ export default function ResearchPage() {
 								<FallenBlocksIllustration className="w-72 h-42 lg:w-128 lg:h-84" />
 							</div>
 						</section>
+
+						<section className="max-w-3xl flex flex-col gap-4">
+							<Heading as="h3" size="md" className="text-brand-grey font-semibold">
+								Works Cited
+							</Heading>
+							<ul className="list-none pl-0 space-y-3">
+								<Text as="li" size="md" className="text-brand-grey">
+									Canadian Human Rights Commission. (n.d.).{" "}
+									<ExternalLink href="https://www.chrc-ccdp.gc.ca/our-work/monitoring-canada-human-rights-obligations/monitoring-disability-rights/right-housing-people-disabilities#results" className="text-brand-medium-green">
+										Right to housing for people with disabilities
+									</ExternalLink>
+									.
+								</Text>
+								<Text as="li" size="md" className="text-brand-grey">
+									Children and Youth Planning Table. (2024).{" "}
+									<ExternalLink href="https://childrenandyouthplanningtable.ca/wp-content/uploads/2024/08/HOMELESSNESS-Snapshot-YOUTH-IMPACT-SURVEY-Fast-Facts-V2-FINAL.pdf" className="text-brand-medium-green">
+										Youth Impact Survey: Homelessness snapshot fast facts (V2)
+									</ExternalLink>
+									.
+								</Text>
+								<Text as="li" size="md" className="text-brand-grey">
+									Region of Waterloo. (n.d.).{" "}
+									<ExternalLink href="https://www.regionofwaterloo.ca/en/living-here/affordable-housing-plan.aspx" className="text-brand-medium-green">
+										Affordable housing plan
+									</ExternalLink>
+									.
+								</Text>
+								<Text as="li" size="md" className="text-brand-grey">
+									Region of Waterloo. (2023).{" "}
+									<ExternalLink href="https://aroundtheregion.ca/a-roadmap-to-ending-chronic-homelessness-in-waterloo-region/" className="text-brand-medium-green">
+										A roadmap to ending chronic homelessness in Waterloo Region
+									</ExternalLink>
+									.
+								</Text>
+								<Text as="li" size="md" className="text-brand-grey">
+									Region of Waterloo. (n.d.).{" "}
+									<ExternalLink href="https://www.regionofwaterloo.ca/en/living-here/resources/Housing-Services/137392-CS---PIT-Count-Infographic_Accessibility.pdf" className="text-brand-medium-green">
+										Point-in-Time Count infographic
+									</ExternalLink>
+									.
+								</Text>
+								<Text as="li" size="md" className="text-brand-grey">
+									Social Development Centre Waterloo Region. (2024).{" "}
+									<ExternalLink href="https://waterlooregion.org/sites/default/files/PECHKeyFindingsReport_DRAFT.pdf" className="text-brand-medium-green">
+										Plan to End Chronic Homelessness: Key findings report (Draft)
+									</ExternalLink>
+									.
+								</Text>
+								<Text as="li" size="md" className="text-brand-grey">
+									YWCA Cambridge. (2023).{" "}
+									<ExternalLink href="https://www.ywcacambridge.ca/wp-content/uploads/2023/07/Project-Willow-Report.pdf" className="text-brand-medium-green">
+										Project Willow report
+									</ExternalLink>
+									.
+								</Text>
+								<Text as="li" size="md" className="text-brand-grey">
+									YWCA Cambridge. (n.d.).{" "}
+									<ExternalLink href="https://ywcacambridge.ca/shelter/" className="text-brand-medium-green">
+										Women’s shelter services
+									</ExternalLink>
+									.
+								</Text>
+							</ul>
+
+						</section>
 					</div>
 				</Container>
 			</div>
