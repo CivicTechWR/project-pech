@@ -1,5 +1,5 @@
-import { cn } from "@/lib/utils";
 import type { ReactNode } from "react";
+import { cn } from "@/lib/utils";
 
 interface Plan2025SegmentProps {
 	barClassName?: string;
@@ -37,8 +37,9 @@ export default function Plan2025Segment({
 				"flex flex-col",
 				// On desktop: Hide if position is top (already shown above). Show if bottom.
 				// On mobile: Always show (because mobile layout is always Bar -> Line -> Content)
-				connectorPosition === "top" ? "md:hidden" : "flex"
-			)}>
+				connectorPosition === "top" ? "md:hidden" : "flex",
+			)}
+			>
 				<div className="w-[1px] h-10 md:h-16 bg-brand-white/50"></div>
 				<div className={cn("flex flex-col pt-4", contentClassName)}>
 					{children}
