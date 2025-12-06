@@ -38,5 +38,8 @@ export default antfu({
 			"no-var": "error",
 		},
 	},
+	rules: {
+		"react-refresh/only-export-components": "off",
+	},
 	ignores: ["CLAUDE.md"],
 });
