@@ -108,14 +108,14 @@ export default function Home() {
 							);
 						})}
 					</div>
-					<div className="flex flex-col items-start">
+					{/* <div className="flex flex-col items-start">
 						<Heading size="xs" className="font-normal break-words" as="h3">
 							"Housing is both a human right and a speculative commodity from which to extract wealth. Therein lies the crux of the housing problem. Until we fully reconcile these contradictory roles that housing plays, we will be in a perpetual state of crisis."
 						</Heading>
 						<Text size="xl" className="break-words">
 							—(Doucet, Mcdougall and Jay 2023) (LE Prototyping Cohort, 2024)
 						</Text>
-					</div>
+					</div> */}
 				</Container>
 				<Container
 					size="6xl"
@@ -195,13 +195,13 @@ export default function Home() {
 						</Heading>
 						<div className="flex flex-col gap-6">
 							<Text className="leading-7">
-								We are situated on land that belongs to the Six Nations of the Grand River as ratified in the Haldimand Treaty of 1784. The Region serves an area that is within the traditional territories of the Haudenosaunee Anishinaabe, and Chonnonton, people. This area is governed by the Dish with One Spoon Treaty which requires that the land be peacefully shared while ensuring mutual benefit for all.
+								We live and work on the traditional territories of the Chonnonton (Neutral), Anishinaabe, Haudenosaunee, and Peoples. Their relationships with this land long predate the arrival of settlers, and their presence continues today.
 							</Text>
 							<Text className="leading-7">
-								We are committed to understanding the impacts of both settler colonialism and our government’s failures to uphold the responsibilities under the Dish with One Spoon Treaty. We recognize that Indigenous communities continue to experience inequality, systemic oppression, and intergenerational trauma as a result of colonialism.
+								This region also lies within the Haldimand Tract, land along the Grand River that was granted to the Six Nations of the Grand River in 1784. These treaty promises were not upheld, and much of this land was taken or sold without the consent of the Six Nations.
 							</Text>
 							<Text className="leading-7">
-								We acknowledge the enduring presence, strength, and wisdom of the Indigenous people, as well as their generosity in sharing the land with those of us who are settlers.
+								We recognize the ongoing impacts of colonialism, including the housing instability and inequities Indigenous communities continue to face. As we work toward ending chronic homelessness, we commit to building relationships rooted in respect, responsibility, and action. This statement is a starting point. We will continue learning, listening, and working with Indigenous partners to shape a more intentional and community-led approach.
 							</Text>
 						</div>
 
@@ -209,7 +209,7 @@ export default function Home() {
 
 				</Container>
 			</section>
-			<section className=" text-brand-grey py-10">
+			{/* <section className=" text-brand-grey py-10">
 				<Container size="6xl" className="flex flex-col gap-2">
 					<div className="grid grid-cols-12 gap-4 md:gap-8">
 						<div className="col-span-12 md:col-span-4 flex flex-col gap-6">
@@ -231,7 +231,7 @@ export default function Home() {
 						</div>
 					</div>
 				</Container>
-			</section>
+			</section> */}
 		</React.Fragment>
 	);
 }
