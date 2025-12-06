@@ -15,27 +15,34 @@ export default function Plan2025Segment({
 	children,
 }: Plan2025SegmentProps) {
 	return (
-		<div className="relative w-full">
-			<div className={cn("h-12 md:h-full", barClassName)}></div>
-			<div className={cn(
-				"md:absolute",
-				connectorPosition === "top" ? "md:-top-27 flex flex-col-reverse md:flex-col" : "md:top-12"
-			)}>
+		<div className="flex flex-col w-full h-full">
+			{/* Desktop Top Area - Spacer/Content to align bars */}
+			<div className="hidden md:flex flex-col justify-end h-[200px] shrink-0">
 				{connectorPosition === "top" ? (
 					<>
-						<div className="flex flex-col">
-							{children}
-						</div>
-						<div className="w-[1px] h-10 md:h-16 bg-brand-white/50"></div>
+						<div className="flex flex-col pb-4">{children}</div>
+						<div className="w-[1px] h-16 bg-brand-white/50"></div>
 					</>
 				) : (
-					<>
-						<div className="w-[1px] h-10 md:h-16 bg-brand-white/50"></div>
-						<div className={cn("flex flex-col", contentClassName)}>
-							{children}
-						</div>
-					</>
+					// Empty spacer to ensure bar alignment
+					<div className="w-full h-full"></div>
 				)}
+			</div>
+
+			{/* Bar */}
+			<div className={cn("h-12 w-full shrink-0", barClassName)}></div>
+
+			{/* Bottom Area - Content/Lines */}
+			<div className={cn(
+				"flex flex-col",
+				// On desktop: Hide if position is top (already shown above). Show if bottom.
+				// On mobile: Always show (because mobile layout is always Bar -> Line -> Content)
+				connectorPosition === "top" ? "md:hidden" : "flex"
+			)}>
+				<div className="w-[1px] h-10 md:h-16 bg-brand-white/50"></div>
+				<div className={cn("flex flex-col pt-4", contentClassName)}>
+					{children}
+				</div>
 			</div>
 		</div>
 	);
