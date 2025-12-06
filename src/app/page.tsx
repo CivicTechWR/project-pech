@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
-import type { Profile } from "../lib/directus";
 import { ArrowRightIcon } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { HouseIllustration } from "@/components/pages/index-page";
@@ -15,8 +13,6 @@ import { FallenBuildingIllustration } from "../components/pages/index-page/falle
 import { HouseWithMagnifyingLensIllustration } from "../components/pages/index-page/house-with-magnifying-lens-illustration";
 import { HousingStatsContainer } from "../components/pages/index-page/housing-stats/housing-stats-container";
 import { Button } from "../components/ui/button";
-import { getDirectusAssetUrl } from "../lib/assets";
-import { directus, readItems } from "../lib/directus";
 import { SharedGoalsWhiteBGIllustration } from "./shared-goals-white-bg-illustration";
 
 export const dynamic = "force-dynamic";
@@ -236,65 +232,65 @@ export default function Home() {
 	);
 }
 
-async function getCoordinatingTeam(): Promise<Profile[]> {
-	try {
-		const coordinators = await directus.request(
-			readItems("profiles", {
-				filter: {
-					is_coordinator: { _eq: true },
-					status: { _eq: "published" },
-				},
-				fields: ["id", "display_name", "display_blurb", "profile_image", "status", "is_coordinator"],
-			}),
-		);
+// async function getCoordinatingTeam(): Promise<Profile[]> {
+// 	try {
+// 		const coordinators = await directus.request(
+// 			readItems("profiles", {
+// 				filter: {
+// 					is_coordinator: { _eq: true },
+// 					status: { _eq: "published" },
+// 				},
+// 				fields: ["id", "display_name", "display_blurb", "profile_image", "status", "is_coordinator"],
+// 			}),
+// 		);
 
-		return coordinators.map((c) => {
-			return {
-				...c,
-				profile_image: c.profile_image ? getDirectusAssetUrl(c.profile_image) : undefined,
-			};
-		});
-	} catch (error) {
-		console.error("Failed to fetch coordinating team:", error);
-		return [];
-	}
-}
+// 		return coordinators.map((c) => {
+// 			return {
+// 				...c,
+// 				profile_image: c.profile_image ? getDirectusAssetUrl(c.profile_image) : undefined,
+// 			};
+// 		});
+// 	} catch (error) {
+// 		console.error("Failed to fetch coordinating team:", error);
+// 		return [];
+// 	}
+// }
 
-async function CoordinatingTeam() {
-	const profiles = await getCoordinatingTeam();
+// async function CoordinatingTeam() {
+// 	const profiles = await getCoordinatingTeam();
 
-	return (
-		<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
-			{profiles.map((profile) => {
-				return (
-					<div
-						key={profile.id}
-						className="flex gap-4 items-center"
-					>
-						<div className="relative h-16 w-16">
-							<Image
-								src={profile.profile_image!}
-								alt={profile.display_name}
-								fill
-								className="object-cover object-[center_20%] rounded-full"
-							/>
-						</div>
-						<div>
-							<Text size="md">
-								{profile.display_name}
-							</Text>
-							<Text
-								className="text-brand-medium-green text-sm truncate max-w-[80px] sm:max-w-[100px]"
-							>
-								{profile.display_blurb}
-							</Text>
-						</div>
-					</div>
-				);
-			})}
-		</div>
-	);
-}
+// 	return (
+// 		<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
+// 			{profiles.map((profile) => {
+// 				return (
+// 					<div
+// 						key={profile.id}
+// 						className="flex gap-4 items-center"
+// 					>
+// 						<div className="relative h-16 w-16">
+// 							<Image
+// 								src={profile.profile_image!}
+// 								alt={profile.display_name}
+// 								fill
+// 								className="object-cover object-[center_20%] rounded-full"
+// 							/>
+// 						</div>
+// 						<div>
+// 							<Text size="md">
+// 								{profile.display_name}
+// 							</Text>
+// 							<Text
+// 								className="text-brand-medium-green text-sm truncate max-w-[80px] sm:max-w-[100px]"
+// 							>
+// 								{profile.display_blurb}
+// 							</Text>
+// 						</div>
+// 					</div>
+// 				);
+// 			})}
+// 		</div>
+// 	);
+// }
 
 function OutlinedHouseIllustration(props: React.ComponentPropsWithRef<"svg">) {
 	return (
