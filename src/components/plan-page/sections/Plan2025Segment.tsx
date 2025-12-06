@@ -18,15 +18,17 @@ export default function Plan2025Segment({
 		<div className="flex flex-col w-full h-full">
 			{/* Desktop Top Area - Spacer/Content to align bars */}
 			<div className="hidden md:flex flex-col justify-end h-[200px] shrink-0">
-				{connectorPosition === "top" ? (
-					<>
-						<div className="flex flex-col pb-4">{children}</div>
-						<div className="w-[1px] h-16 bg-brand-white/50"></div>
-					</>
-				) : (
+				{connectorPosition === "top"
+					? (
+						<>
+							<div className="flex flex-col pb-4">{children}</div>
+							<div className="w-[1px] h-16 bg-brand-white/50"></div>
+						</>
+					)
+					: (
 					// Empty spacer to ensure bar alignment
-					<div className="w-full h-full"></div>
-				)}
+						<div className="w-full h-full"></div>
+					)}
 			</div>
 
 			{/* Bar */}
