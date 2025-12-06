@@ -544,8 +544,6 @@ export default function ResearchPage() {
 
 						</section>
 
-
-						
 					</div>
 				</Container>
 			</div>
