@@ -446,7 +446,7 @@ export default function ResearchPage() {
 							/>
 						</div>
 
-						<section className="flex flex-row items-center flex-wrap xl:flex-nowrap space-between">
+						<section className="max-w-xl xl:max-w-full flex flex-row items-center flex-wrap xl:flex-nowrap space-between">
 							<div className="flex flex-col gap-8">
 								<Heading as="p" size="md" className="text-brand-grey">
 									There is a long waiting list for subsidized housing in Waterloo Region.
@@ -467,7 +467,7 @@ export default function ResearchPage() {
 									A shortage of subsidized housing, along with rising rents and income that can't keep up with the cost of living has put even more pressure on a system under strain.
 								</Text>
 							</div>
-							<div>
+							<div className="hidden flex-grow-0 lg:block">
 								<FallenBlocksIllustration className="w-72 h-42 lg:w-128 lg:h-84" />
 							</div>
 						</section>
