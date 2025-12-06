@@ -108,14 +108,14 @@ export default function Home() {
 							);
 						})}
 					</div>
-					<div className="flex flex-col items-start">
+					{/* <div className="flex flex-col items-start">
 						<Heading size="xs" className="font-normal break-words" as="h3">
 							"Housing is both a human right and a speculative commodity from which to extract wealth. Therein lies the crux of the housing problem. Until we fully reconcile these contradictory roles that housing plays, we will be in a perpetual state of crisis."
 						</Heading>
 						<Text size="xl" className="break-words">
 							—(Doucet, Mcdougall and Jay 2023) (LE Prototyping Cohort, 2024)
 						</Text>
-					</div>
+					</div> */}
 				</Container>
 				<Container
 					size="6xl"
@@ -209,7 +209,7 @@ export default function Home() {
 
 				</Container>
 			</section>
-			<section className=" text-brand-grey py-10">
+			{/* <section className=" text-brand-grey py-10">
 				<Container size="6xl" className="flex flex-col gap-2">
 					<div className="grid grid-cols-12 gap-4 md:gap-8">
 						<div className="col-span-12 md:col-span-4 flex flex-col gap-6">
@@ -231,7 +231,7 @@ export default function Home() {
 						</div>
 					</div>
 				</Container>
-			</section>
+			</section> */}
 		</React.Fragment>
 	);
 }
