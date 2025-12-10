@@ -136,6 +136,12 @@ export function DataDashboard() {
 			/>
 			<HowPeopleEnterAndLeaveHomelessness />
 			<ShelterStatusSection />
+			<Separator
+				className="data-[orientation=horizontal]:h-px bg-brand-black data-[orientation=horizontal]:w-full"
+			/>
+			<Text size="sm" as="p" className="text-brand-grey">
+				The data on this page comes from a database called HIFIS 4.0, which is the Region of Waterloo's client management system.
+			</Text>
 		</div>
 	);
 }

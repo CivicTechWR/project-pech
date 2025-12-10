@@ -8,6 +8,9 @@ import {
 } from "../../../ui/chart";
 import { Heading } from "../../../ui/heading";
 import { Text } from "../../../ui/text";
+import { AverageBedsAvailableIllustration } from "./average-beds-available-illustration";
+import { AverageDaysOfStayIllustration } from "./average-days-of-stay-illustration";
+import { NumberOfPeopleTurnedAwayIllustration } from "./number-of-people-turned-away-illustration";
 
 // Dummy data for the shelter status chart
 const householdData = [
@@ -58,9 +61,27 @@ function CustomYAxisTick({ x, y, payload }: any) {
 	);
 }
 
+const ShelterData = [
+	{
+		title: "Average Beds Available",
+		value: 46,
+		illustration: AverageBedsAvailableIllustration,
+	},
+	{
+		title: "Average Days of Stay",
+		value: 48,
+		illustration: AverageDaysOfStayIllustration,
+	},
+	{
+		title: "Number of People Turned Away",
+		value: 247,
+		illustration: NumberOfPeopleTurnedAwayIllustration,
+	},
+];
+
 export function ShelterStatusSection() {
 	return (
-		<section className="flex flex-col gap-4">
+		<section className="flex flex-col gap-8">
 			<Heading size="sm" as="h4" className="font-semibold">
 				How Our Shelter System Is Doing
 			</Heading>
@@ -182,6 +203,29 @@ export function ShelterStatusSection() {
 						</Text>
 					</div>
 				</div>
+			</div>
+
+			<div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+				{ShelterData.map(({ title, value, illustration: Illustration }) => {
+					const id = title.toLowerCase().replace(" ", "-");
+
+					const key = `shelter-status-data-${id}`;
+
+					return (
+						<div key={key} className="flex flex-col gap-2 h-full">
+							<Heading size="xs" as="p" className="font-normal">
+								{title}
+							</Heading>
+							<div className="flex space-between items-center gap-8">
+								<Illustration />
+								<Heading size="xl" className="font-bold">
+									{value}
+								</Heading>
+							</div>
+
+						</div>
+					);
+				})}
 			</div>
 		</section>
 	);
