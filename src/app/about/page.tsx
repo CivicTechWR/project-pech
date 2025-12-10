@@ -58,7 +58,7 @@ export default function AboutPage() {
 							The Plan was created by many community members, including people with lived experience of homelessness, frontline workers, community groups, advocates, and Regional staff.
 						</Text>
 						<Link
-							href="/plan"
+							href="/co-creators"
 							className={cn(
 								ButtonVariants({
 									size: "default",
@@ -67,9 +67,10 @@ export default function AboutPage() {
 								"w-fit mt-2",
 							)}
 						>
-							Learn more about the Plan
+							Meet the people who co-created the Plan
 							<ArrowRightIcon />
 						</Link>
+
 					</div>
 					<div className="hidden md:block md:col-span-2">
 						<PlanToEndChronicHomelessnessIllustration
@@ -93,11 +94,14 @@ export default function AboutPage() {
 					</div>
 					<div className="col-span-5 md:col-span-3 flex flex-col gap-8">
 						<Heading size="lg" as="h3">
-							Meet the people who co-created the Plan
+							What our system needs
 
 						</Heading>
-
+						<Text size="xl">
+							The Plan explains that to end homelessness, our system must become:
+						</Text>
 						<ul className="list-disc list-inside">
+
 							<Text as="li" className="" size="lg">
 								{" "}
 								<strong>Responsive: </strong>
@@ -130,7 +134,7 @@ export default function AboutPage() {
 							</Text>
 						</ul>
 						<Link
-							href="/co-creators"
+							href="/plan"
 							className={cn(
 								ButtonVariants({
 									size: "default",
@@ -139,7 +143,7 @@ export default function AboutPage() {
 								"w-fit mt-2",
 							)}
 						>
-							Meet the people who co-created the Plan
+							Learn more about the Plan
 							<ArrowRightIcon />
 						</Link>
 					</div>
