@@ -5,6 +5,7 @@ import { ChronicHomelessnessCountIllustration } from "./chronic-homelessness-cou
 import { ChronicHomelessnessInSystemCountIllustration } from "./chronic-homelessness-in-system-count-illustration";
 import { HowPeopleEnterAndLeaveHomelessness } from "./entry-exit";
 import { OverallHomelessCountIllustration } from "./overall-homeless-count-illustration";
+import { ShelterStatusSection } from "./shelter-status";
 import { TotalSystemOccupancyCountIllustration } from "./total-system-occupancy-count-illustration";
 
 const DataArr = [
@@ -134,7 +135,7 @@ export function DataDashboard() {
 				className="data-[orientation=horizontal]:h-px bg-brand-black data-[orientation=horizontal]:w-full"
 			/>
 			<HowPeopleEnterAndLeaveHomelessness />
-
+			<ShelterStatusSection />
 		</div>
 	);
 }
