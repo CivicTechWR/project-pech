@@ -49,7 +49,7 @@ const chartConfig = {
 function CustomYAxisTick({ x, y, payload }: any) {
 	return (
 		<g transform={`translate(${x},${y})`}>
-			<foreignObject x={-150} y={-10} width={145} height={30}>
+			<foreignObject x={-190} y={-10} width={185} height={30}>
 				<Text size="sm" className="text-right whitespace-nowrap">
 					{payload.value}
 				</Text>
@@ -82,7 +82,7 @@ export function ShelterStatusSection() {
 							dataKey="category"
 							tickLine={false}
 							axisLine={false}
-							width={140}
+							width={190}
 							tick={<CustomYAxisTick />}
 						/>
 						<ChartTooltip content={<ChartTooltipContent />} />
@@ -109,7 +109,7 @@ export function ShelterStatusSection() {
 							dataKey="category"
 							tickLine={false}
 							axisLine={false}
-							width={140}
+							width={190}
 							tick={<CustomYAxisTick />}
 						/>
 						<ChartTooltip content={<ChartTooltipContent />} />
