@@ -47,7 +47,7 @@ export function HowPeopleEnterAndLeaveHomelessness() {
 
 						return (
 							<div className="flex flex-row gap-4 items-center" key={key}>
-								<Text size="sm" className="text-right whitespace-nowrap">
+								<Text size="sm" className="whitespace-nowrap">
 									{item.title}
 								</Text>
 								<div className="w-48 bg-brand-light-green text-center py-3 font-semibold text-2xl">
