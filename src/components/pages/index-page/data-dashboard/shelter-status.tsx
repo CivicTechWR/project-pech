@@ -12,14 +12,14 @@ import { Text } from "../../../ui/text";
 // Dummy data for the shelter status chart
 const householdData = [
 	{
-		category: "Household / Individual",
+		category: "People Who Need Shelter",
 		value: 127,
 	},
 ];
 
 const availableSpaceData = [
 	{
-		category: "Available Space",
+		category: "Spaces Available",
 		supportive: 18,
 		transitional: 12,
 		emergency: 48,
@@ -49,7 +49,7 @@ const chartConfig = {
 function CustomYAxisTick({ x, y, payload }: any) {
 	return (
 		<g transform={`translate(${x},${y})`}>
-			<foreignObject x={-130} y={-10} width={125} height={30}>
+			<foreignObject x={-150} y={-10} width={145} height={30}>
 				<Text size="sm" className="text-right whitespace-nowrap">
 					{payload.value}
 				</Text>
