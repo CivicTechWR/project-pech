@@ -28,10 +28,10 @@ const genderData = [
 const ageGroupData = [
 	{
 		category: "Shelter User",
-		age18_24: 15,
-		age25_34: 25,
-		age35_44: 22,
-		age45_54: 18,
+		youthUnder16: 5,
+		youth16_24: 18,
+		age25_39: 32,
+		age40_54: 25,
 		age55_64: 14,
 		age65Plus: 6,
 	},
@@ -69,20 +69,20 @@ const genderChartConfig = {
 };
 
 const ageChartConfig = {
-	age18_24: {
-		label: "18-24",
+	youthUnder16: {
+		label: "Youth (Under 16)",
 		color: "#9b7ec6",
 	},
-	age25_34: {
-		label: "25-34",
+	youth16_24: {
+		label: "Youth (16-24)",
 		color: "#6a9fc6",
 	},
-	age35_44: {
-		label: "35-44",
+	age25_39: {
+		label: "25-39",
 		color: "#6ac6a8",
 	},
-	age45_54: {
-		label: "45-54",
+	age40_54: {
+		label: "40-54",
 		color: "#f4ce6a",
 	},
 	age55_64: {
@@ -119,7 +119,7 @@ export function GenderAgeDemographics() {
 	// Get ordered keys for rendering bars
 	const dataKeys = activeTab === "gender"
 		? ["male", "female", "twoSpirit", "transgenderMan", "transgenderWoman", "nonBinary", "others"]
-		: ["age18_24", "age25_34", "age35_44", "age45_54", "age55_64", "age65Plus"];
+		: ["youthUnder16", "youth16_24", "age25_39", "age40_54", "age55_64", "age65Plus"];
 
 	return (
 		<section className="flex flex-col gap-8">
