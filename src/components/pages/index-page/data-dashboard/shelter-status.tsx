@@ -7,6 +7,7 @@ import {
 	ChartTooltipContent,
 } from "../../../ui/chart";
 import { Heading } from "../../../ui/heading";
+import { Text } from "../../../ui/text";
 
 // Dummy data for the shelter status chart
 const householdData = [
@@ -44,6 +45,19 @@ const chartConfig = {
 	},
 };
 
+// Custom tick component using our Text component
+function CustomYAxisTick({ x, y, payload }: any) {
+	return (
+		<g transform={`translate(${x},${y})`}>
+			<foreignObject x={-130} y={-10} width={125} height={30}>
+				<Text size="xs" className="text-right whitespace-nowrap">
+					{payload.value}
+				</Text>
+			</foreignObject>
+		</g>
+	);
+}
+
 export function ShelterStatusSection() {
 	return (
 		<section className="flex flex-col gap-4">
@@ -60,7 +74,7 @@ export function ShelterStatusSection() {
 					<BarChart
 						data={householdData}
 						layout="vertical"
-						margin={{ left: 120, right: 40, top: 10, bottom: 10 }}
+						margin={{ left: 20, right: 40, top: 10, bottom: 10 }}
 					>
 						<XAxis type="number" hide />
 						<YAxis
@@ -68,8 +82,8 @@ export function ShelterStatusSection() {
 							dataKey="category"
 							tickLine={false}
 							axisLine={false}
-							width={120}
-							tick={{ fontSize: 12 }}
+							width={140}
+							tick={<CustomYAxisTick />}
 						/>
 						<ChartTooltip content={<ChartTooltipContent />} />
 						<Bar dataKey="value" fill={chartConfig.total.color} radius={4}>
@@ -87,7 +101,7 @@ export function ShelterStatusSection() {
 					<BarChart
 						data={availableSpaceData}
 						layout="vertical"
-						margin={{ left: 120, right: 40, top: 10, bottom: 10 }}
+						margin={{ left: 20, right: 40, top: 10, bottom: 10 }}
 					>
 						<XAxis type="number" hide />
 						<YAxis
@@ -95,8 +109,8 @@ export function ShelterStatusSection() {
 							dataKey="category"
 							tickLine={false}
 							axisLine={false}
-							width={120}
-							tick={{ fontSize: 12 }}
+							width={140}
+							tick={<CustomYAxisTick />}
 						/>
 						<ChartTooltip content={<ChartTooltipContent />} />
 
@@ -145,31 +159,30 @@ export function ShelterStatusSection() {
 							className="h-2 w-2 shrink-0 rounded-[2px]"
 							style={{ backgroundColor: chartConfig.supportive.color }}
 						/>
-						<span className="text-xs text-muted-foreground">
+						<Text size="xs" className="text-muted-foreground">
 							{chartConfig.supportive.label}
-						</span>
+						</Text>
 					</div>
 					<div className="flex items-center gap-1.5">
 						<div
 							className="h-2 w-2 shrink-0 rounded-[2px]"
 							style={{ backgroundColor: chartConfig.transitional.color }}
 						/>
-						<span className="text-xs text-muted-foreground">
+						<Text size="xs" className="text-muted-foreground">
 							{chartConfig.transitional.label}
-						</span>
+						</Text>
 					</div>
 					<div className="flex items-center gap-1.5">
 						<div
 							className="h-2 w-2 shrink-0 rounded-[2px]"
 							style={{ backgroundColor: chartConfig.emergency.color }}
 						/>
-						<span className="text-xs text-muted-foreground">
+						<Text size="xs" className="text-muted-foreground">
 							{chartConfig.emergency.label}
-						</span>
+						</Text>
 					</div>
 				</div>
 			</div>
-			a
 		</section>
 	);
 }
