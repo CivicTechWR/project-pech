@@ -4,6 +4,7 @@ import { Text } from "../../../ui/text";
 import { ChronicHomelessnessCountIllustration } from "./chronic-homelessness-count-illustration";
 import { ChronicHomelessnessInSystemCountIllustration } from "./chronic-homelessness-in-system-count-illustration";
 import { HowPeopleEnterAndLeaveHomelessness } from "./entry-exit";
+import { GenderAgeDemographics } from "./gender-age-demographics";
 import { OverallHomelessCountIllustration } from "./overall-homeless-count-illustration";
 import { ShelterStatusSection } from "./shelter-status";
 import { TotalSystemOccupancyCountIllustration } from "./total-system-occupancy-count-illustration";
@@ -125,6 +126,7 @@ export function DataDashboard() {
 					);
 				})}
 			</div>
+			<GenderAgeDemographics />
 			<Separator
 				className="data-[orientation=horizontal]:h-px bg-brand-black data-[orientation=horizontal]:w-full"
 			/>
