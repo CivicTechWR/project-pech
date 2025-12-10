@@ -13,7 +13,6 @@ import { FallenBuildingIllustration } from "../components/pages/index-page/falle
 import { HouseWithMagnifyingLensIllustration } from "../components/pages/index-page/house-with-magnifying-lens-illustration";
 import { HousingStatsContainer } from "../components/pages/index-page/housing-stats/housing-stats-container";
 import { Button } from "../components/ui/button";
-import { SharedGoalsWhiteBGIllustration } from "./shared-goals-white-bg-illustration";
 
 export const dynamic = "force-dynamic";
 
@@ -175,7 +174,7 @@ export default function Home() {
 					</div>
 				</Container>
 			</section>
-			<section className="bg-brand-black text-brand-white py-20">
+			{/* <section className="bg-brand-black text-brand-white py-20">
 				<Container size="6xl" className="grid grid-cols-12 gap-4">
 					<div className="col-span-12 md:col-span-5 flex items-center justify-center">
 						<SharedGoalsWhiteBGIllustration
@@ -204,7 +203,7 @@ export default function Home() {
 					</div>
 
 				</Container>
-			</section>
+			</section> */}
 			{/* <section className=" text-brand-grey py-10">
 				<Container size="6xl" className="flex flex-col gap-2">
 					<div className="grid grid-cols-12 gap-4 md:gap-8">
