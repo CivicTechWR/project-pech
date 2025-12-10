@@ -9,9 +9,9 @@ import { Text } from "@/components/ui/text";
 import { cn } from "@/lib/utils";
 import { BuildingIllustration } from "../components/pages/index-page/building-illustration";
 import { BuildingUnderConstructionIllustration } from "../components/pages/index-page/building-under-construction-illustration";
+import { DataDashboard } from "../components/pages/index-page/data-dashboard/data-dashboard";
 import { FallenBuildingIllustration } from "../components/pages/index-page/fallen-building-illustration";
 import { HouseWithMagnifyingLensIllustration } from "../components/pages/index-page/house-with-magnifying-lens-illustration";
-import { HousingStatsContainer } from "../components/pages/index-page/housing-stats/housing-stats-container";
 import { Button } from "../components/ui/button";
 import { SharedGoalsWhiteBGIllustration } from "./shared-goals-white-bg-illustration";
 
@@ -76,10 +76,8 @@ export default function Home() {
 				className="py-20"
 			>
 				<div className="flex flex-col gap-4">
-					<Heading size="md" className="font-normal">
-						Monthly updates for Waterloo Region
-					</Heading>
-					<HousingStatsContainer />
+
+					<DataDashboard />
 				</div>
 			</Container>
 			<section className="bg-brand-black text-brand-white py-20">
