@@ -22,6 +22,7 @@ export function Header() {
 	};
 
 	const navigationItems = [
+		{ href: "/about", label: "About" },
 		{ href: "/plan", label: "The Plan" },
 		{ href: "/co-creators", label: "Co-Creators" },
 		{ href: "/research", label: "Research" },
