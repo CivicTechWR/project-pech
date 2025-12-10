@@ -50,7 +50,7 @@ function CustomYAxisTick({ x, y, payload }: any) {
 	return (
 		<g transform={`translate(${x},${y})`}>
 			<foreignObject x={-130} y={-10} width={125} height={30}>
-				<Text size="xs" className="text-right whitespace-nowrap">
+				<Text size="sm" className="text-right whitespace-nowrap">
 					{payload.value}
 				</Text>
 			</foreignObject>
@@ -76,7 +76,7 @@ export function ShelterStatusSection() {
 						layout="vertical"
 						margin={{ left: 20, right: 40, top: 10, bottom: 10 }}
 					>
-						<XAxis type="number" hide />
+						<XAxis type="number" hide domain={[0, 140]} />
 						<YAxis
 							type="category"
 							dataKey="category"
@@ -89,8 +89,8 @@ export function ShelterStatusSection() {
 						<Bar dataKey="value" fill={chartConfig.total.color} radius={4}>
 							<LabelList
 								dataKey="value"
-								position="right"
-								style={{ fill: "hsl(var(--foreground))", fontSize: 12 }}
+								position="inside"
+								style={{ fill: "white", fontSize: 12 }}
 							/>
 						</Bar>
 					</BarChart>
@@ -103,7 +103,7 @@ export function ShelterStatusSection() {
 						layout="vertical"
 						margin={{ left: 20, right: 40, top: 10, bottom: 10 }}
 					>
-						<XAxis type="number" hide />
+						<XAxis type="number" hide domain={[0, 140]} />
 						<YAxis
 							type="category"
 							dataKey="category"
@@ -156,28 +156,28 @@ export function ShelterStatusSection() {
 				<div className="flex items-center justify-center gap-4 pt-2">
 					<div className="flex items-center gap-1.5">
 						<div
-							className="h-2 w-2 shrink-0 rounded-[2px]"
+							className="h-4 w-4 shrink-0 rounded-[2px]"
 							style={{ backgroundColor: chartConfig.supportive.color }}
 						/>
-						<Text size="xs" className="text-muted-foreground">
+						<Text size="sm" className="text-muted-foreground">
 							{chartConfig.supportive.label}
 						</Text>
 					</div>
 					<div className="flex items-center gap-1.5">
 						<div
-							className="h-2 w-2 shrink-0 rounded-[2px]"
+							className="h-4 w-4 shrink-0 rounded-[2px]"
 							style={{ backgroundColor: chartConfig.transitional.color }}
 						/>
-						<Text size="xs" className="text-muted-foreground">
+						<Text size="sm" className="text-muted-foreground">
 							{chartConfig.transitional.label}
 						</Text>
 					</div>
 					<div className="flex items-center gap-1.5">
 						<div
-							className="h-2 w-2 shrink-0 rounded-[2px]"
+							className="h-4 w-4 shrink-0 rounded-[2px]"
 							style={{ backgroundColor: chartConfig.emergency.color }}
 						/>
-						<Text size="xs" className="text-muted-foreground">
+						<Text size="sm" className="text-muted-foreground">
 							{chartConfig.emergency.label}
 						</Text>
 					</div>
