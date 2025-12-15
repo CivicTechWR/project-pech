@@ -37,15 +37,15 @@ The site features:
 ## Development Commands
 
 ```bash
-npm run dev          # Start development server
-npm run build        # Build for production
-npm run start        # Start production build locally
-npm run lint         # Run ESLint
-npm run lint:fix     # Fix linting issues automatically
-npm run check-types  # TypeScript type checking
+bun run dev          # Start development server
+bun run build        # Build for production
+bun run start        # Start production build locally
+bun run lint         # Run ESLint
+bun run lint:fix     # Fix linting issues automatically
+bun run check-types  # TypeScript type checking
 ```
 
-**Important:** Always run `npm run lint` and `npm run check-types` after making changes.
+**Important:** Always run `bun run lint` and `bun run check-types` after making changes.
 
 ## Code Style & Conventions
 
@@ -196,7 +196,7 @@ import { getDirectusAssetUrl } from "@/lib/assets";
    - Understand the Server vs Client Component patterns
 
 2. **After Making Changes:**
-   - Always run `npm run lint` and `npm run check-types`
+   - Always run `bun run lint` and `bun run check-types`
    - Test responsive behavior on different screen sizes
    - Verify accessibility with interactive elements
 
